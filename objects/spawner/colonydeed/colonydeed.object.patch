@@ -16,11 +16,14 @@
 		"path": "/outputNodes",
 		"value": [ [0, 1] ]
 	},
-	[
 	{
 		"op": "add",
 		"path": "/deed/colonyTweaks",
 		"value": true
+	},
+	{
+		"op": "replace",
+		"path": "/deed/haveVacatedState",
+		"value": true
 	}
-]
 ]
