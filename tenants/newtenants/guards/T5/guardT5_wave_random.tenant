@@ -1,0 +1,27 @@
+{
+  "name": "guardT5_wave_random",
+  "priority": 15,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "combat": 8,
+    "wave": 12
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": ["human", "apex", "avian", "floran", "glitch", "hylotl"],
+      "level": 5,
+      "type": "guardt5_wave",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [1200.0, 1800.0],
+    "pool": "customRent"
+  }
+}

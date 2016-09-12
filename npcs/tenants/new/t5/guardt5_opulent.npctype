@@ -1,0 +1,429 @@
+{
+	"type" : "guardt5_opulent",
+	"baseType" : "friendlyguardtenant",
+	
+	"items" : {
+    "human" : [
+		[1, [
+          {
+            "head" : [ { "name" : "humantier5shead" } ],
+            "chest" : [ { "name" : "humantier5schest" } ],
+            "legs" : [ { "name" : "humantier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[2, [
+          {
+            "head" : [ { "name" : "humantier5shead" } ],
+            "chest" : [ { "name" : "humantier5schest" } ],
+            "legs" : [ { "name" : "humantier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[3, [
+          {
+            "head" : [ { "name" : "humantier5shead" } ],
+            "chest" : [ { "name" : "humantier5schest" } ],
+            "legs" : [ { "name" : "humantier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[4, [
+          {
+            "head" : [ { "name" : "humantier5shead" } ],
+            "chest" : [ { "name" : "humantier5schest" } ],
+            "legs" : [ { "name" : "humantier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[5, [
+          {
+            "head" : [ { "name" : "humantier5shead" } ],
+            "chest" : [ { "name" : "humantier5schest" } ],
+            "legs" : [ { "name" : "humantier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ]
+    ],
+    "apex" : [
+		[1, [
+          {
+            "head" : [ { "name" : "apextier5shead" } ],
+            "chest" : [ { "name" : "apextier5schest" } ],
+            "legs" : [ { "name" : "apextier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[2, [
+          {
+            "head" : [ { "name" : "apextier5shead" } ],
+            "chest" : [ { "name" : "apextier5schest" } ],
+            "legs" : [ { "name" : "apextier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[3, [
+          {
+            "head" : [ { "name" : "apextier5shead" } ],
+            "chest" : [ { "name" : "apextier5schest" } ],
+            "legs" : [ { "name" : "apextier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[4, [
+          {
+            "head" : [ { "name" : "apextier5shead" } ],
+            "chest" : [ { "name" : "apextier5schest" } ],
+            "legs" : [ { "name" : "apextier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[5, [
+          {
+            "head" : [ { "name" : "apextier5shead" } ],
+            "chest" : [ { "name" : "apextier5schest" } ],
+            "legs" : [ { "name" : "apextier5spants" } ],
+            "primary" : [
+              "npcpistol",
+              "npcmachinepistol",
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ]
+    ],
+    "avian" : [
+      [1, [
+          {
+            "head" : [ { "name" : "aviantier5shead" } ],
+            "chest" : [ { "name" : "aviantier5schest" } ],
+            "legs" : [ { "name" : "aviantier5spants" } ],
+            "primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[2, [
+          {
+            "head" : [ { "name" : "aviantier5shead" } ],
+            "chest" : [ { "name" : "aviantier5schest" } ],
+            "legs" : [ { "name" : "aviantier5spants" } ],
+            "primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[3, [
+          {
+            "head" : [ { "name" : "aviantier5shead" } ],
+            "chest" : [ { "name" : "aviantier5schest" } ],
+            "legs" : [ { "name" : "aviantier5spants" } ],
+            "primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[4, [
+          {
+            "head" : [ { "name" : "aviantier5shead" } ],
+            "chest" : [ { "name" : "aviantier5schest" } ],
+            "legs" : [ { "name" : "aviantier5spants" } ],
+            "primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ],
+		[5, [
+          {
+            "head" : [ { "name" : "aviantier5shead" } ],
+            "chest" : [ { "name" : "aviantier5schest" } ],
+            "legs" : [ { "name" : "aviantier5spants" } ],
+            "primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ]
+    ],
+    "floran" : [
+      [1, [
+          {
+            "head" : [ { "name" : "florantier5shead" } ],
+            "chest" : [ { "name" : "florantier5schest" } ],
+            "legs" : [ { "name" : "florantier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[2, [
+          {
+            "head" : [ { "name" : "florantier5shead" } ],
+            "chest" : [ { "name" : "florantier5schest" } ],
+            "legs" : [ { "name" : "florantier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[3, [
+          {
+            "head" : [ { "name" : "florantier5shead" } ],
+            "chest" : [ { "name" : "florantier5schest" } ],
+            "legs" : [ { "name" : "florantier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[4, [
+          {
+            "head" : [ { "name" : "florantier5shead" } ],
+            "chest" : [ { "name" : "florantier5schest" } ],
+            "legs" : [ { "name" : "florantier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[5, [
+          {
+            "head" : [ { "name" : "florantier5shead" } ],
+            "chest" : [ { "name" : "florantier5schest" } ],
+            "legs" : [ { "name" : "florantier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ],
+    "hylotl" : [
+      [1, [
+          {
+            "head" : [ { "name" : "hylotltier5shead" } ],
+            "chest" : [ { "name" : "hylotltier5schest" } ],
+            "legs" : [ { "name" : "hylotltier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[2, [
+          {
+            "head" : [ { "name" : "hylotltier5shead" } ],
+            "chest" : [ { "name" : "hylotltier5schest" } ],
+            "legs" : [ { "name" : "hylotltier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[3, [
+          {
+            "head" : [ { "name" : "hylotltier5shead" } ],
+            "chest" : [ { "name" : "hylotltier5schest" } ],
+            "legs" : [ { "name" : "hylotltier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[4, [
+          {
+            "head" : [ { "name" : "hylotltier5shead" } ],
+            "chest" : [ { "name" : "hylotltier5schest" } ],
+            "legs" : [ { "name" : "hylotltier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[5, [
+          {
+            "head" : [ { "name" : "hylotltier5shead" } ],
+            "chest" : [ { "name" : "hylotltier5schest" } ],
+            "legs" : [ { "name" : "hylotltier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ],
+    "glitch" : [
+		[1, [
+          {
+            "head" : [ { "name" : "glitchtier5shead" } ],
+            "chest" : [ { "name" : "glitchtier5schest" } ],
+            "legs" : [ { "name" : "glitchtier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[2, [
+          {
+            "head" : [ { "name" : "glitchtier5shead" } ],
+            "chest" : [ { "name" : "glitchtier5schest" } ],
+            "legs" : [ { "name" : "glitchtier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[3, [
+          {
+            "head" : [ { "name" : "glitchtier5shead" } ],
+            "chest" : [ { "name" : "glitchtier5schest" } ],
+            "legs" : [ { "name" : "glitchtier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[4, [
+          {
+            "head" : [ { "name" : "glitchtier5shead" } ],
+            "chest" : [ { "name" : "glitchtier5schest" } ],
+            "legs" : [ { "name" : "glitchtier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ],
+		[5, [
+          {
+            "head" : [ { "name" : "glitchtier5shead" } ],
+            "chest" : [ { "name" : "glitchtier5schest" } ],
+            "legs" : [ { "name" : "glitchtier5spants" } ],
+            "primary" : [
+              "npcbroadsword"
+            ],
+            "sheathedprimary" : [
+              "npcassaultrifle"
+            ]
+          }
+        ] ]
+    ]
+  }
+}

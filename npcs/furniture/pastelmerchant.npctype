@@ -1,0 +1,83 @@
+{
+  "type" : "pastelmerchant",
+  "baseType" : "merchanttenant",
+  
+  "damageTeam" : 1,
+  
+  "disableWornArmor" : true,
+  
+
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+  "merchant" : {
+      "waitTime" : 40,
+      "storeRadius" : -1,
+      "categories" : {
+        "human" : ["pastelmerchant"]
+      },
+      "buyFactorRange" : [ 1.5, 1.5 ],
+      "sellFactorRange" : [ 0.2, 0.2 ],
+      "numItems" : 13,
+      "paneLayoutOverride" : {
+        "windowtitle" : {
+          "title" : "  Pastel Merchant",
+          "subtitle" : "  Thinks they can dance."
+        }
+      }
+    },
+  
+    "questGenerator" : {
+      "pools" : ["common", "tenant", "merchant"]
+    },
+
+    "dialog" : {
+      "merchant" : {
+        "start" : "/dialog/merchant.config:merchantStart",
+        "end" : "/dialog/merchant.config:merchantEnd",
+        "follow" : "/dialog/merchant.config:follow",
+        "welcome" : "/dialog/merchant.config:welcome",
+        "tout" : "/dialog/merchant.config:tout"
+      },
+      "flee" : {
+        "helpme" : "/dialog/flee.config:helpme",
+        "safe" : "/dialog/flee.config:safe"
+      },
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/merchant.config:tagCriteria",
+          "enclosedArea" : "/dialog/merchant.config:enclosedArea",
+          "otherDeed" : "/dialog/merchant.config:otherDeed",
+          "severe" : "/dialog/merchant.config:severe",
+          "final" : "/dialog/merchant.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/merchant.config:beacon",
+          "rent" : "/dialog/merchant.config:rent"
+        }
+      },
+      "accuse" : "/dialog/thief.config:accuse",
+      "alert" : "/dialog/thief.config:alert"
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "fairyhead" }
+            ],
+            "chest" : [
+              { "name" : "fairychest" }
+            ],
+            "back" : [
+              { "name" : "fairyback" }
+            ],
+            "legs" : [
+              { "name" : "fairylegs" }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

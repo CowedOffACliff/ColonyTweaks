@@ -1,0 +1,29 @@
+{
+  "name": "glitchsewer_guardt4",
+  "priority": 20,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"combat": 8,
+    "tier4": 12,
+    "glitchsewer": 24
+
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "glitch",
+	  "level": 4,
+      "type": "glitchsewer_guardt4",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "customRent"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "musicalmerchant",
+  "priority": 11,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "musical": 12,
+	"commerce": 8
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "floran",
+      "type": "musicalmerchant",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [600.0, 1800.0],
+    "pool": "customRent"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "eyemerchant",
+  "priority": 20,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "eyepatch": 18,
+	"commerce": 8
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "type": "eyemerchant",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [600.0, 1800.0],
+    "pool": "customRent"
+  }
+}

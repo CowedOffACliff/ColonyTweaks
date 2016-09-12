@@ -1,0 +1,83 @@
+{
+  "type" : "spookymerchant",
+  "baseType" : "merchanttenant",
+  
+  "damageTeam" : 1,
+  
+  "disableWornArmor" : true,
+  
+
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+  "merchant" : {
+      "waitTime" : 40,
+      "storeRadius" : -1,
+      "categories" : {
+        "floran" : ["spookymerchant"]
+      },
+      "buyFactorRange" : [ 1.5, 1.5 ],
+      "sellFactorRange" : [ 0.2, 0.2 ],
+      "numItems" : 9,
+      "paneLayoutOverride" : {
+        "windowtitle" : {
+          "title" : "  Spooky Merchant",
+          "subtitle" : "  Boo!"
+        }
+      }
+    },
+  
+    "questGenerator" : {
+      "pools" : ["common", "tenant", "merchant"]
+    },
+
+    "dialog" : {
+      "merchant" : {
+        "start" : "/dialog/merchant.config:merchantStart",
+        "end" : "/dialog/merchant.config:merchantEnd",
+        "follow" : "/dialog/merchant.config:follow",
+        "welcome" : "/dialog/merchant.config:welcome",
+        "tout" : "/dialog/merchant.config:tout"
+      },
+      "flee" : {
+        "helpme" : "/dialog/flee.config:helpme",
+        "safe" : "/dialog/flee.config:safe"
+      },
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/merchant.config:tagCriteria",
+          "enclosedArea" : "/dialog/merchant.config:enclosedArea",
+          "otherDeed" : "/dialog/merchant.config:otherDeed",
+          "severe" : "/dialog/merchant.config:severe",
+          "final" : "/dialog/merchant.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/merchant.config:beacon",
+          "rent" : "/dialog/merchant.config:rent"
+        }
+      },
+      "accuse" : "/dialog/thief.config:accuse",
+      "alert" : "/dialog/thief.config:alert"
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "skullmaskhead", "parameters" : { "colorIndex" : 0 } }, { "name" : "vicioushead", "parameters" : { "colorIndex" : 1 } }, { "name" : "florantier5mhead", "parameters" : { "colorIndex" : 1 } }
+            ],
+            "back" : [
+              { "name" : "bonewingsback", "parameters" : { "colorIndex" : 0 } }, { "name" : "batwingsback", "parameters" : { "colorIndex" : 1 } }, { "name" : "jeffback", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "chest" : [
+              { "name" : "glitchtier4chest", "parameters" : { "colorIndex" : 1 } }
+            ],
+            "legs" : [
+              { "name" : "glitchtier4pants", "parameters" : { "colorIndex" : 1 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

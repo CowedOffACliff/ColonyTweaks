@@ -1,0 +1,70 @@
+{
+  "type" : "apexresearchlab_guardt4",
+  "baseType" : "friendlyguardtenant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["tenant", "common"],
+	  "graduation" : {
+        "nextNpcType" : [
+          [0.25, "crewmemberchemistblue"],
+          [0.25, "crewmemberchemistgreen"],
+          [0.25, "crewmemberchemistyellow"],
+          [0.25, "crewmemberchemistorange"]
+        ]
+      }
+    },
+    
+    "reactions" : {
+      "spontaneous" : [
+        [1.0, "sit", { "timeRange" : [0.6,0.2]}],
+        [1.0, "patrol", { "timeRange" : [0.2, 0.6] }]
+      ]
+    },
+	
+	"dialog" : {
+      "converse" : {
+        "apex" : {
+          "default" : [
+            "I am here doing ground research for the Miniknog. Don't worry, I'll be nice.",
+            "The Miniknog stationed me out here for field research. It wasn't my idea, trust me.",
+            "The Miniknog have ordered me to do field research. I wish I wasn't stationed here...",
+            "I'm here doing research on behalf of the Miniknog. Try not to interrupt me.",
+            "Don't believe the rebel lies - The Miniknog are here to help the universe."
+          ],
+          "apex" : [
+            "I am here doing ground research for the Miniknog. Don't worry, I'll be nice.",
+            "I hope you aren not a defector. Either you are with the Miniknog, or against us.",
+            "The Miniknog have ordered me to do field research. I wish I wasn't stationed here...",
+            "I'm here doing research on behalf of the Miniknog. Try not to interrupt me.",
+            "I hope you are a supporter of the Miniknog. We both know what happens to rebels..."
+          ]
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "scientisthead" }
+            ],
+            "chest" : [
+              { "name" : "apextier6mchest", "parameters" : { "colorIndex" : 3 } }
+            ],
+            "legs" : [
+              { "name" : "apextier6mpants", "parameters" : { "colorIndex" : 3 } }
+            ],
+			"primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ]
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "guardT5_opulent_floran",
+  "priority": 20,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "floran": 8,
+    "combat": 8,
+    "opulent": 12
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "floran",
+      "level": 5,
+      "type": "guardt5_opulent",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "customRent"
+  }
+}

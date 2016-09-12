@@ -1,0 +1,28 @@
+{
+  "name": "guardT6_opulent_apex",
+  "priority": 25,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "apex": 8,
+    "combat": 8,
+    "opulent": 30
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "apex",
+      "level": 6,
+      "type": "guardt6_opulent",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "customRent"
+  }
+}

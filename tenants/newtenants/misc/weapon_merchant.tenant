@@ -1,0 +1,27 @@
+{
+  "name": "weaponmerchant",
+  "priority": 11,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "combat": 12,
+	"storage": 8,
+	"commerce": 8
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "human",
+      "type": "weaponmerchant",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [600.0, 1800.0],
+    "pool": "customRent"
+  }
+}

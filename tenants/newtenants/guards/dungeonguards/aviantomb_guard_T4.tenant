@@ -1,0 +1,28 @@
+{
+  "name": "aviantomb_guardt4",
+  "priority": 20,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+	"combat": 8,
+    "tier4": 12,
+    "aviantomb": 24
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": "avian",
+	  "level": 4,
+      "type": "aviantomb_guardt4",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [900.0, 1800.0],
+    "pool": "customRent"
+  }
+}

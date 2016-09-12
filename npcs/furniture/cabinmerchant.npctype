@@ -1,0 +1,79 @@
+{
+  "type" : "cabinmerchant",
+  "baseType" : "merchanttenant",
+  
+  "damageTeam" : 1,
+  
+  "disableWornArmor" : true,
+
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+  "merchant" : {
+      "waitTime" : 40,
+      "storeRadius" : -1,
+      "categories" : {
+        "human" : ["cabinmerchant"]
+      },
+      "buyFactorRange" : [ 1.5, 1.5 ],
+      "sellFactorRange" : [ 0.2, 0.2 ],
+      "numItems" : 10,
+      "paneLayoutOverride" : {
+        "windowtitle" : {
+          "title" : "  Cabin Merchant",
+          "subtitle" : "  On permanent vacation."
+        }
+      }
+    },
+  
+    "questGenerator" : {
+      "pools" : ["common", "tenant", "merchant"]
+    },
+
+    "dialog" : {
+      "merchant" : {
+        "start" : "/dialog/merchant.config:merchantStart",
+        "end" : "/dialog/merchant.config:merchantEnd",
+        "follow" : "/dialog/merchant.config:follow",
+        "welcome" : "/dialog/merchant.config:welcome",
+        "tout" : "/dialog/merchant.config:tout"
+      },
+      "flee" : {
+        "helpme" : "/dialog/flee.config:helpme",
+        "safe" : "/dialog/flee.config:safe"
+      },
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/merchant.config:tagCriteria",
+          "enclosedArea" : "/dialog/merchant.config:enclosedArea",
+          "otherDeed" : "/dialog/merchant.config:otherDeed",
+          "severe" : "/dialog/merchant.config:severe",
+          "final" : "/dialog/merchant.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/merchant.config:beacon",
+          "rent" : "/dialog/merchant.config:rent"
+        }
+      },
+      "accuse" : "/dialog/thief.config:accuse",
+      "alert" : "/dialog/thief.config:alert"
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "caphead", "parameters" : { "colorIndex" : 0 } }, { "name" : "caphead", "parameters" : { "colorIndex" : 8 } }, { "name" : "swamphat", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "chest" : [
+              { "name" : "hikerchest", "parameters" : { "colorIndex" : 8 } }, { "name" : "hikerchest", "parameters" : { "colorIndex" : 11 } }, { "name" : "pilotchest", "parameters" : { "colorIndex" : 2 } }, { "name" : "workoutchest", "parameters" : { "colorIndex" : 3 } }
+            ],
+            "legs" : [
+              { "name" : "workoutlegs", "parameters" : { "colorIndex" : 0 } }, { "name" : "humantier1pants", "parameters" : { "colorIndex" : 0 } }, { "name" : "hunterlegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

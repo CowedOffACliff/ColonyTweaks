@@ -1,0 +1,154 @@
+{
+  "type" : "fleshmerchant",
+  "baseType" : "merchanttenant",
+  
+  "damageTeam" : 1,
+  
+  "disableWornArmor" : true,
+
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+  "merchant" : {
+      "waitTime" : 40,
+      "storeRadius" : -1,
+      "categories" : {
+        "human" : ["fleshmerchant"]
+      },
+      "buyFactorRange" : [ 1.0, 1.0 ],
+      "sellFactorRange" : [ 0.2, 0.2 ],
+      "numItems" : 10,
+      "paneLayoutOverride" : {
+        "windowtitle" : {
+          "title" : "  Flesh Collector",
+          "subtitle" : "  Sells fleshy objects..."
+        }
+      }
+    },
+  
+    "questGenerator" : {
+      "pools" : ["common", "tenant", "merchant"]
+    },
+
+    "dialog" : {
+	"merchant" : {
+        "start" : {
+          "human" : {
+            "default" : [
+            "I'm a peddler of rare fleshy goods! Come check out my wares!",
+            "I sell fleshy treasure! Come take a look!",
+            "I travel all over collecting fleshy goods to sell! Check out my wares!"
+            ]
+          }  
+        },
+        "end" : {
+          "human" : {
+            "default" : [
+              "Come back soon!",
+              "There's more flesh where that came from!",
+              "You know you want more flesh!"
+            ]
+          }
+        },
+        "follow" : {
+          "human" : {
+            "default" : [
+              "Follow me to my fleshy, fleshy store!",
+              "I sell fleshy goods! Follow me to my store!",
+              "I sell fleshy stuff! Come check it out!"
+            ]
+          }
+        },
+        "welcome" : {
+          "human" : {
+            "default" : [
+              "Here we are!",
+              "Now we can do business"
+            ]
+          }
+        },
+	  "tout" : "/dialog/merchant.config:tout"
+    },
+	
+	"tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+            "default" : {
+              "default" : [
+                "There used to be more fleshy stuff here than there is now!",
+                "What happened to my fleshy furniture!?"
+              ]
+            }
+          },
+          "enclosedArea" : {
+            "default" : {
+              "default" : [
+                "I think there's a broken wall here! Could you help?",
+                "It feels a bit drafty. Could you check the walls?"
+              ]
+            }
+          },
+          "otherDeed" : {
+            "default" : {
+              "default" : [
+                "Hey! No one else should be moving in here, okay!?",
+                "Wasn't this place just for me?"
+              ]
+            }
+          },
+          "severe" : {
+            "default" : {
+              "default" : [
+                "I can't look for fleshy goods when my house is such a mess!",
+                "How am I meant to look for flesh under these conditions?!"
+              ]
+            }
+          },
+          "final" : {
+            "default" : {
+              "default" : [
+                "Welp. Time to seek my fortune elsewhere!",
+                "I can't live like this! Time to journey onwards, into the Fleshy Unknown!"
+              ]
+            }
+          }
+        },
+        "arrivedHome" : {
+          "beacon" : {
+            "default" : {
+              "default" : [
+                "Hey! Do you need me for something?!",
+                "Hey there, how's it hangin'?"
+              ]
+            }
+          },
+          "rent" : {
+            "default" : {
+              "default" : [
+                "I came across this in my trading! It's a present for you!",
+                "I got this from one of my trades. Hope you like it!"
+              ]
+            }
+          }
+        }
+      }
+	}
+  },
+  
+    "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "anatomyhead", "parameters" : { "colorIndex" : 0 } } 
+            ],
+            "chest" : [
+              { "name" : "anatomychest", "parameters" : { "colorIndex" : 0 } }
+            ],
+            "legs" : [
+              { "name" : "anatomylegs", "parameters" : { "colorIndex" : 0 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

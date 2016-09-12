@@ -1,0 +1,78 @@
+{
+  "type" : "rainbowmerchant",
+  "baseType" : "merchanttenant",
+  
+  "damageTeam" : 1,
+  
+  "disableWornArmor" : true,
+
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+  "merchant" : {
+      "waitTime" : 40,
+      "storeRadius" : -1,
+      "categories" : {
+        "glitch" : ["rainbowmerchant"]
+      },
+      "buyFactorRange" : [ 1.0, 1.0 ],
+      "sellFactorRange" : [ 0.2, 0.2 ],
+      "numItems" : 10,
+      "paneLayoutOverride" : {
+        "windowtitle" : {
+          "title" : "  Rainbow Merchant",
+          "subtitle" : "  Puts color in your life."
+        }
+      }
+    },
+  
+    "questGenerator" : {
+      "pools" : ["common", "tenant", "merchant"]
+    },
+
+    "dialog" : {
+	"merchant" : {
+        "start" : "/dialog/merchant.config:merchantStart",
+        "end" : "/dialog/merchant.config:merchantEnd",
+        "follow" : "/dialog/merchant.config:follow",
+        "welcome" : "/dialog/merchant.config:welcome",
+        "tout" : "/dialog/merchant.config:tout"
+      },
+      "flee" : {
+        "helpme" : "/dialog/flee.config:helpme",
+        "safe" : "/dialog/flee.config:safe"
+      },
+      "tenant" : {
+        "grumbles" : {
+          "severe" : "/dialog/colourful.config:severe",
+          "final" : "/dialog/colourful.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/colourful.config:beacon",
+          "rent" : "/dialog/colourful.config:rent"
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "rainbowhoodhead" }
+            ],
+            "back" : [
+              { "name" : "rainbowcapeback" }
+            ],
+            "chest" : [
+              { "name" : "glitchtier2chest", "parameters" : { "colorIndex" : 3 } }
+            ],
+            "legs" : [
+              { "name" : "glitchtier2pants", "parameters" : { "colorIndex" : 3 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}
+

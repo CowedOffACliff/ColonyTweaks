@@ -1,0 +1,1245 @@
+[
+
+// nulls out all of the existing merchants
+{	"op": "remove", "path": "/geodemerchant"},
+{	"op": "remove", "path": "/springmerchant"},
+{	"op": "remove", "path": "/oasismerchant"},
+{	"op": "remove", "path": "/shroommerchant"},
+{	"op": "remove", "path": "/glowmerchant"},
+{	"op": "remove", "path": "/giantflowermerchant"},
+{	"op": "remove", "path": "/foundrymerchant"},
+{	"op": "remove", "path": "/deadbeatmerchant"},
+{	"op": "remove", "path": "/frogtenantmerchant"},
+{	"op": "remove", "path": "/steamspringmerchant"},
+{	"op": "remove", "path": "/prismmerchant"},
+
+
+
+// 	Brand new merchant pools for every biome
+
+// main biome pools
+
+{	"op": "add", "path": "/alienmerchant", "value": [[0, [
+	//basic
+	//furniture
+	{ "item" : { "name" : "alienchair" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "alienbed" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "aliendoor" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "alientable" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "alienchest" }, 	"rarity" : 0.3},
+	//costume
+	{"item" : {"name" : "symbiotehead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "alienskullhead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "beachcreeperhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "beachcreeperchest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "beachcreeperlegs"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "causticstaghead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "hazmathead"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "hazmatchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "hazmatlegs"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "hazmatback"}, 			"rarity" : 0.01},
+	//crafting mats
+	{ "item" : { "name" : "alienstripedwood" },	"rarity" : 0.5}
+	]]
+]},
+
+{	"op": "add", "path": "/desertmerchant", "value": [[0, [
+	//basic
+	{"item" : {"name" : "sandstonestatuehuman"}, "rarity" : 0.001},
+	{"item" : {"name" : "sandstonestatuefloran"},"rarity" : 0.001},
+	{"item" : {"name" : "sandstonestatuehylotl"},"rarity" : 0.001},
+	{"item" : {"name" : "sandstonestatueavian"}, "rarity" : 0.001},
+	{"item" : {"name" : "sandstonestatueapex"},  "rarity" : 0.001},
+	{"item" : {"name" : "sandstonestatueglitch"},"rarity" : 0.001},
+	//furniture
+	{ "item" : { "name" : "sandstonechair" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "sandstonebed" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "sandstonedoor" }, 	"rarity" : 0.3},
+    { "item" : { "name" : "sandstonetorch" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "sandstonetable" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "sandstonechest" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "dustybed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "dustychair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "dustytable" }, 		"rarity" : 0.3},
+	//costume
+	{"item" : {"name" : "bedouinchest"}, 		"rarity" : 0.1},
+	{"item" : {"name" : "bedouinhead"}, 		"rarity" : 0.1},
+	{"item" : {"name" : "bedouinlegs"}, 		"rarity" : 0.1},
+	{"item" : {"name" : "coolfezhead"}, 		"rarity" : 0.0001},
+	{"item" : {"name" : "hunterchest"}, 		"rarity" : 0.0001},
+	{"item" : {"name" : "hunterback"}, 			"rarity" : 0.0001},
+	{"item" : {"name" : "hunterlegs"}, 			"rarity" : 0.0001},
+	//crafting mats
+	{ "item" : { "name" : "sandstonematerial" },"rarity" : 0.5},
+	{ "item" : { "name" : "sandstoneblock" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "tribalplatform" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "aztecmaterial" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "temple1" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "temple2" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "temple3" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "temple4" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "tombbrick" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "tombbrick2" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "tombbrick3" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "tombbrick4" }, 		"rarity" : 0.3}
+	]]
+]},
+
+//{	"op": "add", "path": "/junglemerchant", "value": [[0, [
+//	//basic
+//	//costume
+//	{"item" : {"name" : "headbandhead"}, 	"rarity" : 0.01},
+//	{"item" : {"name" : "toughchest"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "toughlegs"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "tigerhead"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "tigertailback"}, 	"rarity" : 0.01},
+//	{"item" : {"name" : "teddyhead"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "bearhead"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "hazmathead"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "hazmatchest"}, 	"rarity" : 0.01},
+//	{"item" : {"name" : "hazmatlegs"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "hazmatback"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "hikerchest"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "hikerback"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "hikerlegs"}, 		"rarity" : 0.01},
+//	{"item" : {"name" : "safetyhelmethead"},"rarity" : 0.01}
+//	//crafting mats
+//	]]
+//]},
+
+{	"op": "add", "path": "/toxicmerchant", "value": [[0, [
+	//basic
+	//furniture
+	{ "item" : { "name" : "toxicchest" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "toxictable" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "toxicchair" }, 		"rarity" : 0.3},
+    { "item" : { "name" : "toxiclamp1" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "toxiclamp2" }, 		"rarity" : 0.3},
+	//costume
+	{"item" : {"name" : "toxicflowerback"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "mutanthead"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "mutantchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "mutantpants"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "mutantback"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "plaguedoctorhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "toxicwasteback"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "dangerbarrelback"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "hazmathead"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "hazmatchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "hazmatlegs"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "hazmatback"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "headbandhead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "toughchest"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "toughlegs"}, 			"rarity" : 0.01},
+	//crafting mats
+	{ "item" : { "name" : "biosample" },	"rarity" : 0.5}
+	]]
+]},
+
+// "oceanmerchant" spawns via sea furniture so it's technically the "searmerchant" -- 
+//  will not rename all npc configs from ocean to sea since it would fuck up pre-existing NPCs
+
+{	"op": "add", "path": "/oceanmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "coralmirror"		}},
+	{ "item" : { "name" : "seabed" 			}},
+	{ "item" : { "name" : "seachair" 		}},
+	{ "item" : { "name" : "sealamp" 		}},
+	{ "item" : { "name" : "seaweedpot" 		}},
+	
+	//basic
+	{"item" : {"name" : "watergun"}, 			"rarity" : 0.4},
+	{"item" : {"name" : "seashellshield"}, 		"rarity" : 0.09},
+	//costume
+	{"item" : {"name" : "hawaiianhead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "hawaiianchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "hawaiianlegs"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "piratehead"}, 			"rarity" : 0.05},
+	{"item" : {"name" : "piratechest"}, 		"rarity" : 0.05},
+	{"item" : {"name" : "piratelegs"}, 			"rarity" : 0.05},
+	{"item" : {"name" : "pirateback"}, 			"rarity" : 0.05},
+	{"item" : {"name" : "divingmaskhead"}, 		"rarity" : 0.02},
+	{"item" : {"name" : "deepdiverhead"}, 		"rarity" : 0.6},
+	{"item" : {"name" : "buccaneerhead"}, 		"rarity" : 0.1},
+	{"item" : {"name" : "buccaneerchest"}, 		"rarity" : 0.1},
+	{"item" : {"name" : "buccaneerlegs"}, 		"rarity" : 0.1},
+	{"item" : {"name" : "jumpsuitchest"}, 		"rarity" : 0.04},
+	{"item" : {"name" : "jumpsuitlegs"}, 		"rarity" : 0.04},
+	{"item" : {"name" : "oxygentank"}, 			"rarity" : 0.04},
+	{"item" : {"name" : "snorkelhead"}, 		"rarity" : 0.02},
+	
+	//crafting mats
+	{"item" : {"name" : "coconut"}, 		"rarity" : 0.001},
+	{"item" : {"name" : "liquidmilk"}, 		"rarity" : 0.001}
+	]]
+]},
+
+{	"op": "add", "path": "/steampunkmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "steampunkarmchair"	}},
+	{ "item" : { "name" : "steampunkbed" 		}},
+	{ "item" : { "name" : "steampunkdesk" 		}},
+	{ "item" : { "name" : "steampunkglobe"		}},
+	{ "item" : { "name" : "steampunklamp" 		}},
+	{ "item" : { "name" : "steampunkshelf" 		}},
+	//costume
+	{"item" : {"name" : "clocktophathead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "pilothead"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "tophathead"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "novakidwaistcoat"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "piratelegs"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "moneybagschest"}, 		"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/astronautmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "earthmodel"		}},
+	{ "item" : { "name" : "jupitermodel" 	}},
+	{ "item" : { "name" : "liftoffseat" 	}},
+	{ "item" : { "name" : "marsmodel"		}},
+	{ "item" : { "name" : "mercurymodel" 	}},
+	{ "item" : { "name" : "neptunemodel" 	}},
+	{ "item" : { "name" : "plutomodel"		}},
+	{ "item" : { "name" : "satellite" 		}},
+	{ "item" : { "name" : "saturnmodel" 	}},
+	{ "item" : { "name" : "spaceshuttlebed" }},
+	{ "item" : { "name" : "sunmodel" 		}},
+	{ "item" : { "name" : "uranusmodel" 	}},
+	{ "item" : { "name" : "venusmodel" 		}},
+	//costume
+	{"item" : {"name" : "spacesuithead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "spacesuitback"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "spacesuitchest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "spacesuitlegs"}, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/cabinmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "cabinbunkbed"	}},
+	{ "item" : { "name" : "cabinchair" 		}},
+	{ "item" : { "name" : "cabinlamp" 		}},
+	{ "item" : { "name" : "cabinornament"	}},
+	{ "item" : { "name" : "cabinstooltable"	}},
+	{ "item" : { "name" : "cabinstove" 		}},
+	{ "item" : { "name" : "cabintable"		}},
+	//costume
+	{"item" : {"name" : "caphead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "swamphat"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "hikerchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "workoutchest"},	"rarity" : 0.01},
+	{"item" : {"name" : "pilotchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "workoutlegs"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "humantier1pants"}, "rarity" : 0.01},
+	{"item" : {"name" : "hunterlegs"}, 		"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/farmmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "applebasket"				}},
+	{ "item" : { "name" : "baguettebox" 			}},
+	{ "item" : { "name" : "kitchencabinet1" 		}},
+	{ "item" : { "name" : "kitchencabinet2"			}},
+	{ "item" : { "name" : "kitchenstovetop"			}},
+	{ "item" : { "name" : "kitchenceilingcabinet1" 	}},
+	{ "item" : { "name" : "kitchenceilingcabinet2"	}},
+	{ "item" : { "name" : "kitchenshelf"			}},
+	{ "item" : { "name" : "kitchentable"			}},
+	//costume
+	{"item" : {"name" : "wildfungushead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "wildfunguschest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "wildfunguspants"}, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/gothicmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "gothicbed"			}},
+	{ "item" : { "name" : "gothicbookcase" 		}},
+	{ "item" : { "name" : "gothicchair" 		}},
+	{ "item" : { "name" : "gothiccouch"			}},
+	{ "item" : { "name" : "gothicdoor"			}},
+	{ "item" : { "name" : "gothiclight" 		}},
+	//costume
+	{"item" : {"name" : "plaguedoctorhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "plaguemasterhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "novakidwaistcoat"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "merchantchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "cultistchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "moneybagschest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "buccaneerlegs"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "wizardlegs"}, 			"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/islandmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "hulagirl"			}},
+	{ "item" : { "name" : "islandcabinet" 		}},
+	{ "item" : { "name" : "islandchair" 		}},
+	{ "item" : { "name" : "islandhammock"		}},
+	{ "item" : { "name" : "islandlamp"			}},
+	{ "item" : { "name" : "islandtable" 		}},
+	//costume
+	{"item" : {"name" : "hawaiianhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "hawaiianchest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "hawaiianlegs"}, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/retroscifimerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "retroscifibed"			}},
+	{ "item" : { "name" : "retroscificabinet" 		}},
+	{ "item" : { "name" : "retroscifichair" 		}},
+	{ "item" : { "name" : "retroscifidresser"		}},
+	{ "item" : { "name" : "retroscifilight"			}},
+	{ "item" : { "name" : "retroscifitable" 		}},
+	{ "item" : { "name" : "retroscifitv" 			}},
+	//costume
+	{"item" : {"name" : "startrackchest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "startracklegs"}, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/saloonmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "saloondoor"			}},
+	{ "item" : { "name" : "saloonseat" 			}},
+	{ "item" : { "name" : "saloontable" 		}},
+	{ "item" : { "name" : "salooncabinet"		}},
+	{ "item" : { "name" : "saloonlight"			}},
+	{ "item" : { "name" : "saloonpiano" 		}},
+	{ "item" : { "name" : "saloonspittoon" 		}},
+	//costume
+	{"item" : {"name" : "novakidsuspenders"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "novakidsuspenderspants"}, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/pastelmerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "pastelbed"			}},
+	{ "item" : { "name" : "pastelbunnyplush" 	}},
+	{ "item" : { "name" : "pastelcabinet" 		}},
+	{ "item" : { "name" : "pastelchair"			}},
+	{ "item" : { "name" : "pastellight"			}},
+	{ "item" : { "name" : "pastelstool" 		}},
+	{ "item" : { "name" : "pasteltable" 		}},
+	{ "item" : { "name" : "pastelwallclock" 	}},
+	{ "item" : { "name" : "pastelwardrobe" 		}},
+	//costume
+	{"item" : {"name" : "fairyhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "fairychest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "fairyback"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "fairylegs"}, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/spookymerchant", "value": [[0, [
+	//furniture
+	{ "item" : { "name" : "spookybed"				}},
+	{ "item" : { "name" : "spookycandles" 			}},
+	{ "item" : { "name" : "spookycauldron" 			}},
+	{ "item" : { "name" : "spookyclock"				}},
+	{ "item" : { "name" : "spookypumpkinhead"		}},
+	{ "item" : { "name" : "spookytombchair" 		}},
+	//costume
+	{"item" : {"name" : "skullmaskhead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "vicioushead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "florantier5mhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "bonewingsback"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "batwingsback"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "jeffback"}, 			"rarity" : 0.01},
+	{"item" : {"name" : "glitchtier4chest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "glitchtier4pants"}, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/geodemerchant", "value": [[0, [
+	// basic
+	{"item" : {"name" : "biorock"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "biorock2"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "geodestone"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "geodeblock"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "limestone"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "blaststone"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "direstone"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "alienrock"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "cobblestonematerial"}, "rarity" : 0.6},
+	{"item" : {"name" : "cobblestonebrick"}, 	"rarity" : 0.6},
+	{"item" : {"name" : "moonstone"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "concretematerial"}, 	"rarity" : 0.6},
+	{"item" : {"name" : "shadowblock"}, 		"rarity" : 0.6},
+	{"item" : {"name" : "shadowwallblock"}, 	"rarity" : 0.6},
+	{"item" : {"name" : "moonrock"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "magmarock"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "obsidian"}, 			"rarity" : 0.6},
+	{"item" : {"name" : "rockbrickmaterial"}, 	"rarity" : 0.6},
+	{"item" : {"name" : "crystalblock"}, 		"rarity" : 0.6},
+	// furniture
+	{ "item" : { "name" : "geodebed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "geodechair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "geodedoor" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "geodeplantpot" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "geodelowanote" },	"rarity" : 0.2},
+	{ "item" : { "name" : "geodebnote" },		"rarity" : 0.2},
+	{ "item" : { "name" : "geodecnote" },		"rarity" : 0.2},
+	{ "item" : { "name" : "geodednote" },		"rarity" : 0.2},
+	{ "item" : { "name" : "geodeenote" },		"rarity" : 0.2},
+	{ "item" : { "name" : "geodefnote" },		"rarity" : 0.2},
+	{ "item" : { "name" : "geodegnote" },		"rarity" : 0.2},
+	{ "item" : { "name" : "geodehighanote" },	"rarity" : 0.2},
+	{ "item" : { "name" : "geodeceilinglight" },"rarity" : 0.3},
+	{ "item" : { "name" : "crystaltable" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "crystalchair" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "crystalbed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "crystallamp" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "crystalchest" }, 	"rarity" : 0.3},
+	// crafting mats
+	{"item" : {"name" : "geode"}, 				"rarity" : 0.4},
+	{ "item" : {"name" : "crystal"}, 			"rarity" : 0.3},
+	// costume
+	{"item" : {"name" : "geodechest"}, 			"rarity" : 0.001},
+	{"item" : {"name" : "geodehead"}, 			"rarity" : 0.001},
+	{"item" : {"name" : "geodelegs"}, 			"rarity" : 0.001}
+	]]
+	]},
+
+{	"op": "add", "path": "/springmerchant", "value": [[0, [
+	{"item" : {"name" : "fireflowerpot"}, 		"rarity" : 0.9},
+	{"item" : {"name" : "wflowerpot"}, 			"rarity" : 0.9},
+	{"item" : {"name" : "plasticplant"}, 		"rarity" : 0.9},
+	{"item" : {"name" : "giantflowerlamp"}, 	"rarity" : 0.9},
+	{"item" : {"name" : "cactiflowerpot"}, 		"rarity" : 0.9},
+	{"item" : {"name" : "splendidplant"}, 		"rarity" : 0.9},
+	{"item" : {"name" : "vibrantplant"}, 		"rarity" : 0.9},
+	{"item" : {"name" : "flowerstatue"}, 		"rarity" : 0.2},
+	//furniture
+	{ "item" : { "name" : "flowerlamp" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "movingsunflower" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "petalfountain" }, 	"rarity" : 0.3},
+    { "item" : { "name" : "springchest" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "flowerbox" }, 		"rarity" : 0.3},
+	// costume
+	{"item" : {"name" : "floweryhead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "flowerychest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "flowerylegs"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "floweryback"}, 		"rarity" : 0.01},
+	// crafting mats
+	{"item" : {"name" : "petalred"}, 			"rarity" : 0.4},
+	{"item" : {"name" : "petalblue"}, 			"rarity" : 0.4},
+	{"item" : {"name" : "petalyellow"}, 		"rarity" : 0.4},
+	{"item" : {"name" : "giantflowerpetal"}, 	"rarity" : 0.3}
+	]]
+	]},
+	
+{	"op": "add", "path": "/bonesmerchant", "value": [[0, [
+	//basic
+	
+    { "item" : { "name" : "throwingbones" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "bonematerial" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "huntingtrophy1" }, 		"rarity" : 0.2 },
+    { "item" : { "name" : "huntingtrophy2" }, 		"rarity" : 0.2 },
+    { "item" : { "name" : "huntingtrophy3" }, 		"rarity" : 0.2 },
+    { "item" : { "name" : "floranarmchair" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "floranbonedisplay1" }, 	"rarity" : 0.3 },
+    { "item" : { "name" : "floranbonedisplay2" }, 	"rarity" : 0.3 },
+    { "item" : { "name" : "floranbonestool" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "floranbonetable2" }, 	"rarity" : 0.5 },
+    { "item" : { "name" : "floranbonerack" },		"rarity" : 0.3 },
+    { "item" : { "name" : "floranshelf" }, 			"rarity" : 0.3 },
+    { "item" : { "name" : "skulltorch" }, 			"rarity" : 0.2 },
+    { "item" : { "name" : "skullwalltorch" }, 		"rarity" : 0.2 },
+	//furniture
+	{ "item" : { "name" : "bonechair" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "bonebed" }, 				"rarity" : 0.3},
+	{ "item" : { "name" : "bonedoor" }, 			"rarity" : 0.3},
+    { "item" : { "name" : "bonechest" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "bonetable" }, 			"rarity" : 0.3},
+	//costume
+	{ "item" : { "name" : "apexskullhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "avianskullhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "floranskullhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "glitchskullhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "humanskullhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "hylotlskullhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "jeffback" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "bonewingsback" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "goathead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "alienskullhead" }, 		"rarity" : 0.01},
+	//crafting mats
+	{ "item" : { "name" : "bone" }, 				"rarity" : 0.3 }
+	]]
+]},
+
+{	"op": "add", "path": "/oasismerchant", "value": [[0, [
+	// basic
+	{"item" : {"name" : "fountain1"}, 				"rarity" : 0.9},
+	{"item" : {"name" : "randomfountain"}, 			"rarity" : 0.9},
+	{"item" : {"name" : "outdoorfountain"}, 		"rarity" : 0.9},
+	{"item" : {"name" : "fountain2"}, 				"rarity" : 0.9},
+	{"item" : {"name" : "classicfountain"}, 		"rarity" : 0.9},
+	{"item" : {"name" : "petalfountain"}, 			"rarity" : 0.4},
+	{"item" : {"name" : "sandstonestatuehylotl"}, 	"rarity" : 0.1},
+	{"item" : {"name" : "sandstonestatueavian"}, 	"rarity" : 0.1},
+	{"item" : {"name" : "sandstonestatueapex"}, 	"rarity" : 0.1},
+	{"item" : {"name" : "sandstonestatueglitch"}, 	"rarity" : 0.1},
+	{"item" : {"name" : "sandstonestatuehuman"}, 	"rarity" : 0.1},
+	{"item" : {"name" : "sandstonestatuefloran"}, 	"rarity" : 0.1},
+	//furniture
+	{ "item" : { "name" : "reedchair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "oasisbed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "reedbed" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "reeddoor" }, 		"rarity" : 0.3},
+    { "item" : { "name" : "reedlamp" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "reeddesk" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "reedchest" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "reedclock" }, 		"rarity" : 0.3},
+	// costume
+	{"item" : {"name" : "reedhead"}, 			"rarity" : 0.001},
+	// crafting mats
+	{"item" : {"name" : "reed"}, 				"rarity" : 0.4},
+	{"item" : {"name" : "reedblock"}, 			"rarity" : 0.2},
+	{"item" : {"name" : "bamboo"}, 				"rarity" : 0.2},
+	{"item" : {"name" : "liquidhealing"}, 		"rarity" : 0.1}
+	]]
+]},
+
+{	"op": "add", "path": "/shroommerchant", "value": [[0, [
+	//basic
+    { "item" : { "name" : "mushroomshield" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "shroomblock" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "shroomlamp" }, 		"rarity" : 0.9},  
+	//furniture
+	{ "item" : { "name" : "shroomchair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "shroombed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "shroomdoor" }, 		"rarity" : 0.3},
+    { "item" : { "name" : "shroomlamp" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "shroomtable" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "shroomchest" }, 		"rarity" : 0.3},
+	//costume
+	{ "item" : { "name" : "shroomdisguisehead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "wildfunguschest" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "wildfungushead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "wildfunguspants" }, 		"rarity" : 0.01},	
+	{ "item" : { "name" : "evilmushroomhead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "mushroomhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "raggedcapeback" }, 		"rarity" : 0.01},
+	//crafting mats
+	{ "item" : { "name" : "shroom" }, 				"rarity" : 0.9 }
+	]],
+	[1.9, [
+    { "item" : { "name" : "mushroombread" } },
+    { "item" : { "name" : "mushroomrice" } },
+    { "item" : { "name" : "mushroomquiche" } }
+    ]]
+]},
+
+{	"op": "add", "path": "/glowmerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "torch" }, 			"rarity" : 0.3 },
+    { "item" : { "name" : "oillantern1" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "flare" }, 			"rarity" : 0.3 },
+	{ "item" : { "name" : "glowstickgreen" },	"rarity" : 0.1 },
+	{ "item" : { "name" : "glowstickblue" },	"rarity" : 0.1 },
+	{ "item" : { "name" : "glowstickyellow" },	"rarity" : 0.1 },
+	{ "item" : { "name" : "glowstickorange" },	"rarity" : 0.1 },
+    { "item" : { "name" : "lavalamp1" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "woodenlamp1" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "studylamp" }, 		"rarity" : 0.3 },
+    { "item" : { "name" : "huntinglight1" }, 	"rarity" : 0.3 },
+    { "item" : { "name" : "huntinglight3" }, 	"rarity" : 0.3 },
+    { "item" : { "name" : "crystaltorch" },	 	"rarity" : 0.3 },
+	{ "item" : { "name" : "shroomlamp" },	 	"rarity" : 0.3 },
+	{ "item" : { "name" : "slimetorch" },	 	"rarity" : 0.3 },
+    { "item" : { "name" : "yellowstim" }, 		"rarity" : 0.5 },
+    { "item" : { "name" : "lighthelmhead" }, 	"rarity" : 0.2 },
+    { "item" : { "name" : "lanternstickback" }, "rarity" : 0.2 },
+	//furniture
+	{ "item" : { "name" : "glowchair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "glowbed" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "glowflowerlamp" }, 	"rarity" : 0.3},
+    { "item" : { "name" : "glowbushlamp" }, 	"rarity" : 0.3},
+    { "item" : { "name" : "glowvinelamp" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "bioshroomtable" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "glowchest" }, 		"rarity" : 0.3},
+	//costume
+	{ "item" : { "name" : "bioluminhead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "bioluminchest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "bioluminlegs" }, 	"rarity" : 0.01},
+	//crafting mats
+	{ "item" : { "name" : "glowfibre" }, 		"rarity" : 0.5}
+	]]
+]},
+
+{	"op": "add", "path": "/giantflowermerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "grassseeds" }, 			"rarity" : 0.5},
+    { "item" : { "name" : "flowerygrassseeds" }, 	"rarity" : 0.5},
+    { "item" : { "name" : "wheatseed" }, 			"rarity" : 0.7},
+    { "item" : { "name" : "cornseed" }, 			"rarity" : 0.5},
+    { "item" : { "name" : "riceseed" }, 			"rarity" : 0.7},
+    { "item" : { "name" : "potatoseed" }, 			"rarity" : 0.4},
+    { "item" : { "name" : "carrotseed" }, 			"rarity" : 0.4},
+    { "item" : { "name" : "tomatoseed" }, 			"rarity" : 0.3},
+    { "item" : { "name" : "sugarcaneseed" }, 		"rarity" : 0.7},
+    { "item" : { "name" : "beakseedseed" }, 		"rarity" : 0.4},
+    { "item" : { "name" : "coffeeseed" }, 			"rarity" : 0.3},
+    { "item" : { "name" : "feathercrownseed" }, 	"rarity" : 0.4},
+    { "item" : { "name" : "kiwiseed" }, 			"rarity" : 0.5},
+    { "item" : { "name" : "grapesseed" }, 			"rarity" : 0.5},
+    { "item" : { "name" : "neonmelonseed" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "automatoseed" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "avesmingoseed" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "bananaseed" }, 			"rarity" : 0.5},
+	{ "item" : { "name" : "boltbulbseed" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "bonebooseed" }, 			"rarity" : 0.6},
+	{ "item" : { "name" : "chiliseed" }, 			"rarity" : 0.6},
+	{ "item" : { "name" : "cottonseed" }, 			"rarity" : 0.5},
+	{ "item" : { "name" : "currentcornseed" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "diodiaseed" }, 			"rarity" : 0.4},
+	{ "item" : { "name" : "dirturchinseed" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "coralcreepseed" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "eggshootseed" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "cocoaseed" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "oculemonseed" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "pussplumseed" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "pearlpeaseed" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "reefpodseed" }, 			"rarity" : 0.5},
+	{ "item" : { "name" : "wartweedseed" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "toxictopseed" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "pineappleseed" }, 		"rarity" : 0.7},
+	//furniture
+	{ "item" : { "name" : "giantflowerchair" }, 	"rarity" : 0.1},
+	{ "item" : { "name" : "giantflowerbed" }, 		"rarity" : 0.1},
+	{ "item" : { "name" : "giantflowerdoor" }, 		"rarity" : 0.1},
+	{ "item" : { "name" : "giantflowerlamp" }, 		"rarity" : 0.1},
+	{ "item" : { "name" : "giantflowertable" }, 	"rarity" : 0.1},
+	{ "item" : { "name" : "giantflowerchest" }, 	"rarity" : 0.1},
+	//costume
+	{ "item" : { "name" : "buzzyhead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "buzzychest" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "buzzylegs" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "buzzyback" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "bananahead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "strawberryhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "berryhead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "butterflywingsback" }, 	"rarity" : 0.01},
+	//crafting mats
+	{"item" : {"name" : "petalred"}, 				"rarity" : 0.4},
+	{"item" : {"name" : "petalblue"}, 				"rarity" : 0.4},
+	{"item" : {"name" : "petalyellow"}, 			"rarity" : 0.4},
+	{"item" : {"name" : "giantflowerpetal"}, 		"rarity" : 0.3}
+	]]
+]},
+
+{	"op": "add", "path": "/foundrymerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "ironbar" }, 				"rarity" : 0.9 },
+    { "item" : { "name" : "tungstenbar" }, 			"rarity" : 0.8 },
+    { "item" : { "name" : "titaniumbar" }, 			"rarity" : 0.7 },
+    { "item" : { "name" : "copperbar" }, 			"rarity" : 0.9 },
+    { "item" : { "name" : "silverbar" }, 			"rarity" : 0.8 },
+    { "item" : { "name" : "goldbar" }, 				"rarity" : 0.9 },
+	{ "item" : { "name" : "durasteelbar" }, 		"rarity" : 0.6 },
+	{ "item" : { "name" : "refinedaegisalt" }, 		"rarity" : 0.5 },
+	{ "item" : { "name" : "refinedferozium" }, 		"rarity" : 0.5 },
+	{ "item" : { "name" : "refinedviolium" }, 		"rarity" : 0.5 },
+	{ "item" : { "name" : "solariumstar" }, 		"rarity" : 0.4 },
+	
+    { "item" : { "name" : "copperpickaxe" }, 		"rarity" : 0.5 },
+    { "item" : { "name" : "silverpickaxe" }, 		"rarity" : 0.5 },
+	{ "item" : { "name" : "goldpickaxe" }, 			"rarity" : 0.4 },
+	{ "item" : { "name" : "platinumpickaxe" }, 		"rarity" : 0.3 },
+	{ "item" : { "name" : "diamondpickaxe" }, 		"rarity" : 0.2 },
+	{ "item" : { "name" : "platinumdrill" }, 		"rarity" : 0.1 },
+	{ "item" : { "name" : "diamonddrill" }, 		"rarity" : 0.1 },
+	// furniture
+	{ "item" : { "name" : "foundrybed" }, 			"rarity" : 0.5 },
+	{ "item" : { "name" : "foundrychair" }, 		"rarity" : 0.5 },
+	{ "item" : { "name" : "foundrydoor" }, 			"rarity" : 0.5 },
+	{ "item" : { "name" : "foundrylight" }, 		"rarity" : 0.5 },
+	{ "item" : { "name" : "magmalamp" }, 			"rarity" : 0.5 },
+	//costume
+	{ "item" : { "name" : "weldershelmethead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "foundryhardhathead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "foundryguardchest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "foundrygoggleshead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "foundrychest" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "foundryback" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "foundryforemanback" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "foundrylegs" }, 			"rarity" : 0.01},
+	//volcanic
+	{"item" : {"name" : "smokemachine"}, 	"rarity" : 0.1},
+	{"item" : {"name" : "firelordhead"}, 	"rarity" : 0.001},
+	{"item" : {"name" : "firelordchest"}, 	"rarity" : 0.001},
+	{"item" : {"name" : "firelordlegs"}, 	"rarity" : 0.001},
+	//crafting mats
+	{"item" : {"name" : "metallic"}, 				"rarity" : 0.3}
+	]]
+]},
+
+{	"op": "add", "path": "/deadbeatmerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "explosivebarrel" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "toxicwastebarrel" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "scorchedlandmine" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "landmine" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "metallictrapdoor" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "lasertripwire" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "wallb" }, 				"rarity" : 0.9},
+	//furniture
+	{ "item" : { "name" : "scorchedcitystoreshelf" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcityregister" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcitycounter" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcitytv" }, 				"rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcityfridge" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcitychestdrawerlarge" }, "rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcitychestdrawersmall" }, "rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcitytable" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcitychair" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "scorchedcitybed" }, 				"rarity" : 0.3},
+	//costume
+	{ "item" : { "name" : "deadbeathelmhead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "deadbeathornhelmhead" }, "rarity" : 0.01},
+	{ "item" : { "name" : "deadbeathornmaskhead" }, "rarity" : 0.01},
+	{ "item" : { "name" : "deadbeathornshead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatleatherchest" }, "rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatleatherlegs" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatmaskhead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatnerdhead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatspandexchest" }, "rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatspandexlegs" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatstrapschest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "deadbeatstrapslegs" }, 	"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+
+{	"op": "add", "path": "/frogtenantmerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "bomb" }, 				"rarity" : 0.9},
+    { "item" : { "name" : "oillantern1" },			"rarity" : 0.9},
+    { "item" : { "name" : "molotov" }, 				"rarity" : 0.9},
+    { "item" : { "name" : "fairylights" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "grassseeds" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "commonpistol" }, 		"rarity" : 0.1, "useSeed" : true},
+    { "item" : { "name" : "lanternstickback" }, 	"rarity" : 0.5},
+    { "item" : { "name" : "recreationalvehicle" }, 	"rarity" : 0.5},
+    { "item" : { "name" : "tier2chair" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "bardoor" }, 				"rarity" : 0.9},
+    { "item" : { "name" : "oillanterntall" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "frogstatue" }, 			"rarity" : 0.5},
+    { "item" : { "name" : "safe" }, 				"rarity" : 0.9},
+    { "item" : { "name" : "medievalregister" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "guillotine" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "trashcan" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "woodenarmchair1" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "medievalswitchshackle" },"rarity" : 0.5},
+    { "item" : { "name" : "coffeemachine" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "commondagger" }, 		"rarity" : 0.1, "useSeed" : true},
+	//furniture
+	{ "item" : { "name" : "swampbed" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "swampybed" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "swampchair" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "swamptable" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "swampchest" }, 			"rarity" : 0.3},
+	//costume
+	{ "item" : { "name" : "lagoonhead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "lagoonchest" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "lagoonpants" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "swamphat" }, 			"rarity" : 0.01}
+	//crafting mats
+	]]
+]},
+
+
+{	"op": "add", "path": "/steamspringmerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "brasslamppost1" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "seismograph" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "jukebox" }, 				"rarity" : 0.9},
+    { "item" : { "name" : "plasmadisc" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "steampunkhead" }, 		"rarity" : 0.2},
+	{ "item" : { "name" : "copperceillinglight" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "copperfence" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "copperlantern" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "copperplatform" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "boilervalve" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "copperblock" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "copperroofing" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "floorgear1" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "floorpipe1" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "floorpipe2" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "floorpipe3" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "heavypipe" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "steamboiler3" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "wooddoor" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "windchicken" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "steamclock" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "fadedblocks" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "ornatewood" }, 			"rarity" : 0.9},
+	//costume
+	{ "item" : { "name" : "pipehat" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "boilerback" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "neckruffle" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "steamgreylegs" }, 	"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "steamspringbed" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "steamspringchair" }, "rarity" : 0.3},
+	{ "item" : { "name" : "steamspringtable" }, "rarity" : 0.3},
+	{ "item" : { "name" : "steamspringdoor" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "steamspringlamp" }, 	"rarity" : 0.3}
+	//crafting mats
+	]]
+]},
+
+{	"op": "add", "path": "/prismmerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "woodenwindow1" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "woodenwindow2" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "glassmaterial" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "crosshatch" }, 		"rarity" : 0.9},
+    { "item" : { "name" : "copperwindow" }, 	"rarity" : 0.9},
+    { "item" : { "name" : "bars" }, 			"rarity" : 0.9},
+    { "item" : { "name" : "heavyironbars" }, 	"rarity" : 0.9},
+	//costume
+	{ "item" : { "name" : "prismhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "prismchest" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "prismlegs" }, 		"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "prismbed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "prismchair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "prismdoor" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "prismtable" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "prismlamp1" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "prismlamp2" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "prismlamp3" }, 		"rarity" : 0.3},
+	//crafting mats
+	{ "item" : {"name" : "prisiliteore"}, 		"rarity" : 0.3}
+	]]
+]},
+
+{	"op": "add", "path": "/tarmerchant", "value": [[0, [
+	//basic
+	{ "item" : {"name" : "tarball"}, "rarity" : 0.9},
+	{ "item" : {"name" : "asphalt"}, "rarity" : 0.1},
+	//costume
+	{ "item" : { "name" : "sabertoothhelm" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "woollychest" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "woollyback" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "woollylegs" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "tarblob" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "tarhead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "tarchest" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "tarlegs" }, 			"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "tarconsole" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "tarchair" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "tarbed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "tardoor" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "tarpitchest" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "tarman" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "tarlight" }, 	"rarity" : 0.3},
+	//crafting mats
+	{ "item" : {"name" : "bone"}, 			"rarity" : 0.4},
+	{ "item" : {"name" : "liquidoil"}, 		"rarity" : 0.3},
+	{ "item" : {"name" : "tar"}, 			"rarity" : 0.9}
+	]]
+]},
+
+{	"op": "add", "path": "/slimemerchant", "value": [[0, [
+	//basic
+	//costume
+	{ "item" : { "name" : "slimechest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "slimehead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "slimelegs" }, 	"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "slimetorch" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "slimechair" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "slimebed" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "slimehide" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "cellchair" }, 	"rarity" : 0.5},
+	{ "item" : { "name" : "celldoor" }, 	"rarity" : 0.5},
+	{ "item" : { "name" : "celllamp" }, 	"rarity" : 0.5},
+	{ "item" : { "name" : "celltable" }, 	"rarity" : 0.5},
+	{ "item" : { "name" : "cellchest" }, 	"rarity" : 0.5},
+	//crafting mats
+	{ "item" : {"name" : "slime"}, 		"rarity" : 0.9},
+	{ "item" : {"name" : "liquidslime"},"rarity" : 0.8},
+	{ "item" : {"name" : "greenslime"}, "rarity" : 0.9},
+	{"item" : {"name" : "cellmatter"}, 	"rarity" : 0.3}
+	]]
+]},
+
+{	"op": "add", "path": "/eyemerchant", "value": [[0, [
+	//basic
+	{"item" : {"name" : "eyeshield"}, 			"rarity" : 0.1},
+	//costume
+	{ "item" : { "name" : "eyehead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "eyehead2" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "eyeback" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "eyeballchest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "eyeballlegs" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "eyeballhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "eyeballback" }, 		"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "eyetable" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "eyechair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "eyebed" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "eyedoor" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "eyechest" }, 		"rarity" : 0.3},
+	//crafting mats
+	{ "item" : { "name" : "eyepiles" }, 		"rarity" : 0.9}
+	]]
+]},
+
+{	"op": "add", "path": "/rainbowmerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "rainbowunicornstatue" }, "rarity" : 0.4},
+	{ "item" : { "name" : "rainbowpainting" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "paintgunpurple" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "paintgunorange" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "paintgungreen" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "paintgunred" }, 			"rarity" : 0.001},
+	{ "item" : { "name" : "paintgunblue" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "paintgunyellow" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "bubblegun" }, 			"rarity" : 0.01},
+	//costume
+	{ "item" : { "name" : "rainbowcapeback" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "rainbowhoodhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "unicornhead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "rainbowwoodhead" }, 		"rarity" : 0.02},
+	{ "item" : { "name" : "rainbowwoodchest" }, 	"rarity" : 0.02},
+	{ "item" : { "name" : "rainbowwoodlegs" }, 		"rarity" : 0.02},
+	{ "item" : { "name" : "crayonredback" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "crayonblueback" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "crayonyellowback" }, 	"rarity" : 0.001},
+	{ "item" : { "name" : "crayonpurpleback" }, 	"rarity" : 0.001},
+	{ "item" : { "name" : "crayongreenback" }, 		"rarity" : 0.001},
+	{ "item" : { "name" : "crayonorangeback" }, 	"rarity" : 0.001},
+	// furniture
+	{ "item" : { "name" : "rainbowtable" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "rainbowchair" }, 		"rarity" : 0.5},
+	{ "item" : { "name" : "rainbowbed" }, 			"rarity" : 0.5},
+	{ "item" : { "name" : "rainbowdoor" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "rainbowchest" }, 		"rarity" : 0.3},
+	//crafting mats
+	{ "item" : { "name" : "rainbowwood" }, 			"rarity" : 0.9}
+	]]
+]},
+
+
+{	"op": "add", "path": "/icemerchant", "value": [[0, [
+	//basic
+	{"item" :  {"name" : "snowglobe1"}, 				"rarity" : 0.9},
+	{"item" :  {"name" : "snowglobe2"}, 				"rarity" : 0.9},
+	//costume
+	{"item" :  {"name" : "survivalgearback"}, 		"rarity" : 0.01},
+	{ "item" : { "name" : "snowinfantryhead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "snowinfantrychest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "snowinfantrypants" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "cyclopsyetihead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "cyclopsyetichest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "cyclopsyetilegs" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "frostcrownhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "icearmorhead" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "icearmorchest" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "icearmorlegs" }, 		"rarity" : 0.01},
+	{ "item" : { "name" : "icecubehead" }, 			"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "icetable" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "icechair" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "icebed" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "icedoor" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "icechest" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "icemachine" }, 		"rarity" : 0.3},
+	//crafting mats
+	{ "item" : { "name" : "snow" }, 			"rarity" : 0.2},
+	{ "item" : { "name" : "slush" }, 			"rarity" : 0.2},
+	{ "item" : { "name" : "frozenwater" }, 		"rarity" : 0.1},
+	{ "item" : { "name" : "frozendirt" }, 		"rarity" : 0.1},
+	{ "item" : { "name" : "ice" }, 				"rarity" : 0.2},
+	{ "item" : { "name" : "snowflake" }, 		"rarity" : 0.9}
+	]]
+]},
+
+{	"op": "add", "path": "/hivemerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "hivebomb" }, 	"rarity" : 0.3},
+	//costume
+	{ "item" : { "name" : "larvahead" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "larvachest" }, 	"rarity" : 0.01},
+	{ "item" : { "name" : "larvalegs" }, 	"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "hivetable" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "hivechair" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "hivebed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "hivedoor" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "hivechest" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "hivelamp" }, 	"rarity" : 0.3},
+	//crafting mats
+	{"item" : {"name" : "larva"}, 			"rarity" : 0.9}
+	]]
+]},
+
+{	"op": "add", "path": "/shadowmerchant", "value": [[0, [
+	//basic
+	//costume
+	{"item" : {"name" : "darkcapeback"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "darkdisguisehead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "darkdisguisechest"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "darkdisguiselegs"}, 	"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "shadowchest" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "shadowmarker" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "shadowshrine" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "shadowshrine2" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "shadowshrine3" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "shadowchimes" }, 	"rarity" : 0.3},
+	//crafting mats
+	{"item" : {"name" : "chain"}, 				"rarity" : 0.3},
+	{"item" : {"name" : "ancientplatform"}, 	"rarity" : 0.3},
+	{"item" : {"name" : "shadowblock"}, 		"rarity" : 0.3},
+	{"item" : {"name" : "shadowspikeblock"}, 	"rarity" : 0.3},
+	{"item" : {"name" : "shadowwallblock"}, 	"rarity" : 0.3}
+	]]
+]},
+
+{	"op": "add", "path": "/rockmerchant", "value": [[0, [
+	//basic
+	//costume
+	{"item" : {"name" : "rockhat"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "rockhead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "rockchest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "rocklegs"}, 		"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "cavechair" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "cavebed" }, 		"rarity" : 0.3},
+	{ "item" : { "name" : "cavelamp" }, 	"rarity" : 0.3},
+	{ "item" : { "name" : "cavechest" }, 	"rarity" : 0.3},
+	//crafting mats
+	{"item" : {"name" : "limestone"}, 		"rarity" : 0.9}
+	]]
+]},
+
+{	"op": "add", "path": "/fleshmerchant", "value": [[0, [
+	//basic
+	//costume
+	{"item" : {"name" : "anatomyapexhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "anatomyavianhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "anatomyhead"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "anatomyhylotlhead"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "anatomyavianlegs"}, 	"rarity" : 0.01},
+	{"item" : {"name" : "anatomychest"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "anatomylegs"}, 		"rarity" : 0.01},
+	{"item" : {"name" : "faceleechhead"}, 		"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "fleshchair" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "fleshbed" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "fleshchest" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "fleshtable" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "fleshdoor" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "cellchair" }, 	"rarity" : 0.8},
+	{ "item" : { "name" : "celldoor" }, 	"rarity" : 0.8},
+	{ "item" : { "name" : "celllamp" }, 	"rarity" : 0.8},
+	{ "item" : { "name" : "celltable" }, 	"rarity" : 0.8},
+	{ "item" : { "name" : "cellchest" }, 	"rarity" : 0.8},
+	//crafting mats
+	{"item" : {"name" : "fleshstrand"}, 	"rarity" : 0.4},
+	{"item" : {"name" : "cellmatter"}, 		"rarity" : 0.3}
+	]]
+]},
+
+
+{	"op": "add", "path": "/alpinemerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "throwingboulder" }, 		"rarity" : 0.9},
+	//costume
+	{ "item" : { "name" : "alpacahead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "alpacachest" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "alpacalegs" }, 			"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "stonebed" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "stonechair" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "stonedoor" }, 			"rarity" : 0.7},
+	{ "item" : { "name" : "stonetable" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "stonechest" }, 			"rarity" : 0.7},
+	{ "item" : { "name" : "alpacaknowledgerune" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "alpacahomerune" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "alpacaliferune" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "alpacaruinrune" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "alpacacomponentrune" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "alpacagrowthrune" }, 	"rarity" : 0.7},
+	//crafting mats
+	{"item" : {"name" : "cobblestonematerial"}, "rarity" : 0.3}
+	]]
+]},
+
+{	"op": "add", "path": "/wealthymerchant", "value": [[0, [
+	//basic
+	{ "item" : { "name" : "barrelgoldfilled" }, 		"rarity" : 0.4},
+	{ "item" : { "name" : "diamonddisplay" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "flowerstatue" }, 			"rarity" : 0.3},
+	{ "item" : { "name" : "glitchspeare" }, 			"rarity" : 0.5},
+	{ "item" : { "name" : "goldenegg" }, 				"rarity" : 0.4},
+	{ "item" : { "name" : "goldenpedestal" }, 			"rarity" : 0.6},
+	{ "item" : { "name" : "goldvase1" }, 				"rarity" : 0.4},
+	{ "item" : { "name" : "goldvase2" }, 				"rarity" : 0.4},
+	{ "item" : { "name" : "goldvase3" }, 				"rarity" : 0.4},
+	{ "item" : { "name" : "goldvase4" }, 				"rarity" : 0.4},
+	{ "item" : { "name" : "goldvase5" }, 				"rarity" : 0.4},
+	{ "item" : { "name" : "grail" }, 					"rarity" : 0.9},
+	{ "item" : { "name" : "hylotlclassicpainting1" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "paintingapegothic" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "paintingapescream" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "paintingapespeare" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "paintingapexpearlearring" }, "rarity" : 0.7},
+	{ "item" : { "name" : "paintingapexpixellisa" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "paintingapexwithermine" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "paintingbirthofapevenus" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "paintingbirthofvenus" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "paintingcreationofapepixel" },"rarity": 0.7},
+	{ "item" : { "name" : "paintingcreationofpixel" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "paintinggothic" }, 			"rarity" : 0.7},
+	{ "item" : { "name" : "paintingpearlearring" }, 	"rarity" : 0.7},
+	{ "item" : { "name" : "paintingscream" }, 			"rarity" : 0.7},
+	{ "item" : { "name" : "paintingshakespeare" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "paintingstarrynight" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "persistenceofpixels" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "rainbowpainting" }, 			"rarity" : 0.7},
+	{ "item" : { "name" : "rainbowunicornstatue" }, 	"rarity" : 0.5},
+	{ "item" : { "name" : "selfportraitofhylotlshu" }, 	"rarity" : 0.6},
+	{ "item" : { "name" : "treasurechest" }, 			"rarity" : 0.4},
+	{ "item" : { "name" : "woodencrategoldfilled" }, 	"rarity" : 0.4},
+	{ "item" : { "name" : "frogstatue" }, 				"rarity" : 0.3},
+	{ "item" : { "name" : "genericpainting1" }, 		"rarity" : 0.7},
+	{ "item" : { "name" : "derrickstatue" }, 			"rarity" : 0.3},
+	//costume
+	{ "item" : { "name" : "moneybagshead" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "moneybagschest" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "moneybagsback" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "moneybagspants" }, 			"rarity" : 0.01},
+	{ "item" : { "name" : "wighead" }, 					"rarity" : 0.01},
+	// furniture
+	{ "item" : { "name" : "carbed" }, 	"rarity" : 0.9},
+	
+	{ "item" : { "name" : "geometricbed" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "geometricchair" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "geometricdoor" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "geometrictable" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "geometriclight" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "geometricswitch" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "opulentbed" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "opulentchair" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "opulentdoor" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "opulenttable" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "opulentlight" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "opulentswitch" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "serenebed" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "serenechair" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "serenedoor" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "serenetable" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "serenelight" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "sereneswitch" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "executivebed" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "executivechair" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "executivedoor" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "executivetable" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "executivelight" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "executiveswitch" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "doombed" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "doomchair" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "doomdoor" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "doomtable" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "doomlight" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "doomswitch" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "wavebed" }, 			"rarity" : 0.9},
+	{ "item" : { "name" : "wavechair" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "wavedoor" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "wavetable" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "wavelight" }, 		"rarity" : 0.9},
+	{ "item" : { "name" : "waveswitch" }, 		"rarity" : 0.9}
+	]]
+]},
+
+{	"op": "add", "path": "/huntermerchant", "value": [[0, [
+	{ "item" : { "name" : "cryonicextract" 	}},
+	{ "item" : { "name" : "hardenedcarapace"}},
+	{ "item" : { "name" : "livingroot" 		}},
+	{ "item" : { "name" : "phasematter" 	}},
+	{ "item" : { "name" : "scorchedcore" 	}},
+	{ "item" : { "name" : "sharpenedclaw" 	}},
+	{ "item" : { "name" : "staticcell" 		}},
+	{ "item" : { "name" : "stickofram" 		}},
+	{ "item" : { "name" : "venomsample" 	}}
+	]]
+]},
+
+{	"op": "add", "path": "/meleemerchant", "value": [[0, [
+	{ "item" : { "name" : "commonbroadsword" 	}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commondagger"		}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonshortsword" 	}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonaxe" 			}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonhammer" 		}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonspear" 		}, 	"rarity" : 0.9},
+	
+	{ "item" : { "name" : "uncommonbroadsword" 	}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommondagger"		}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonshortsword" 	}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonaxe" 		}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonhammer" 		}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonspear" 		}, 	"rarity" : 0.2},
+	
+	{ "item" : { "name" : "rarebroadsword" 	}, 		"rarity" : 0.05},
+	{ "item" : { "name" : "raredagger"		}, 		"rarity" : 0.05},
+	{ "item" : { "name" : "rareshortsword" 	}, 		"rarity" : 0.05},
+	{ "item" : { "name" : "rareaxe" 		}, 		"rarity" : 0.05},
+	{ "item" : { "name" : "rarehammer" 		}, 		"rarity" : 0.05},
+	{ "item" : { "name" : "rarespear" 		}, 		"rarity" : 0.05}
+	]]
+]},
+
+{	"op": "add", "path": "/gunmerchant", "value": [[0, [
+	{ "item" : { "name" : "commonpistol" 			}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonmachinepistol"		}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonassaultrifle" 		}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonshotgun" 			}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonsniperrifle" 		}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commongrenadelauncher" 	}, 	"rarity" : 0.9},
+	{ "item" : { "name" : "commonrocketlauncher" 	}, 	"rarity" : 0.9},
+	
+	{ "item" : { "name" : "uncommonpistol" 			}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonmachinepistol"	}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonassaultrifle" 	}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonshotgun" 		}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonsniperrifle" 	}, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommongrenadelauncher" }, 	"rarity" : 0.2},
+	{ "item" : { "name" : "uncommonrocketlauncher" 	}, 	"rarity" : 0.2},
+	
+	{ "item" : { "name" : "rarepistol" 				}, 	"rarity" : 0.05},
+	{ "item" : { "name" : "raremachinepistol"		}, 	"rarity" : 0.05},
+	{ "item" : { "name" : "rareassaultrifle" 		}, 	"rarity" : 0.05},
+	{ "item" : { "name" : "rareshotgun" 			}, 	"rarity" : 0.05},
+	{ "item" : { "name" : "raresniperrifle" 		}, 	"rarity" : 0.05},
+	{ "item" : { "name" : "raregrenadelauncher" 	}, 	"rarity" : 0.05},
+	{ "item" : { "name" : "rarerocketlauncher" 		}, 	"rarity" : 0.05}
+	]]
+]}
+
+//eof
+]

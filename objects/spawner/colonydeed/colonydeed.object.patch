@@ -1,0 +1,26 @@
+[
+	{"op" : "replace", "path" : "/scripts", "value" : 
+	[
+		"/objects/spawner/colonydeed/script/colonydeedmodified.lua",
+		"/objects/spawner/colonydeed/script/scanningmodified.lua",
+		"/objects/spawner/colonydeed/script/timermodified.lua",
+		"/scripts/util.lua"
+	]},
+	{
+		"op": "add",
+		"path": "/inputNodes",
+		"value": [ [-1, 1] ]
+	},
+	{
+		"op": "add",
+		"path": "/outputNodes",
+		"value": [ [0, 1] ]
+	},
+	[
+	{
+		"op": "add",
+		"path": "/deed/colonyTweaks",
+		"value": true
+	}
+]
+]

@@ -1,0 +1,62 @@
+{
+  "type" : "humanbunker_guardt4",
+  "baseType" : "friendlyguardtenant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["tenant", "common"]
+    },
+    
+    "reactions" : {
+      "spontaneous" : [
+        [1.0, "sit", { "timeRange" : [0.6,0.2]}],
+        [1.0, "patrol", { "timeRange" : [0.2, 0.6] }]
+      ]
+    },
+	
+	"dialog" : {
+      "converse" : {
+        "human" : {
+          "default" : [
+            "I'm here to inspect this location. Stand up straight!",
+            "I'm here to verify the security of this location.",
+            "I am here to make sure this location is up to scratch. Don't mind me!",
+            "I used to work in the military, now I'm a property supervisor. Don't think I've gone soft!",
+            "I'm running a constant inspection, so you'd better not let standards slip around here!"
+          ],
+          "human" : [
+            "I'm here to inspect this location. Stand up straight!",
+            "I'm here to verify the safety of this location. After what happened to Earth, you can't be too careful.",
+            "I am here to make sure this location is up to scratch. Don't mind me!",
+            "I used to work in the military, now I'm a property supervisor. Don't think I've gone soft!",
+            "I'm running a constant inspection, so you'd better not let standards slip around here!"
+          ]
+        }
+      }
+    }
+	},
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "humantier1head", "parameters" : { "colorIndex" : 3 } }
+            ],
+            "chest" : [
+              { "name" : "humantier4chest", "parameters" : { "colorIndex" : 3 } }
+            ],
+            "legs" : [
+              { "name" : "humantier4pants", "parameters" : { "colorIndex" : 3 } }
+            ],
+			"primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ]
+    ]
+  }
+}

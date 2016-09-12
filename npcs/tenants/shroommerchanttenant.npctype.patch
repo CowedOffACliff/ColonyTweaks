@@ -1,0 +1,4 @@
+[
+{	"op": "add", "path": "/scriptConfig/merchant", "value" : {"numItems" : 10}},
+{	"op": "add", "path": "/scriptConfig/merchant", "value": {"storeRadius" : -1}}
+]

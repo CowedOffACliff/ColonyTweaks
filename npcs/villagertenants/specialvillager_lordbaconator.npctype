@@ -1,0 +1,192 @@
+{
+  "type" : "special_lordbaconator",
+  "baseType" : "generictenant",
+  
+  "npcname" : "Lord Baconator",
+  "identity" : {
+    "gender" : "male",
+    "hairGroup" : "hair",
+    "hairType" : "male64",
+	"hairColor" : "9",
+    "facialHairGroup" : "",
+    "facialHairType" : "",
+	"personalityIdle" : "idle.4",
+    "personalityArmIdle" : "idle.1",
+	"hairDirectives" : "?replace=d9c189FF=743A80FF?replace=a38d59FF=743A80FF?replace=735e3aFF=743A80FF",
+	"bodyDirectives" : "?replace=ffe2c5FF=fce6c7FF?replace=ffc181FF=f9d3a9FF?replace=d39c6cFF=d3a57cFF?replace=c7815bFF=b37c5dFF"
+  },
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["common", "tenant"]
+    },
+	
+	"personalities" : [ 
+		[1.0, {
+        "personality" : "flirty",
+        "additiveReactions" : [ "default" ],
+        "reactions" : {
+          "nearnpc" : [
+            [1.0, "wave"],
+            [1.0, "wink"]
+          ],
+          "nearplayer" : [
+            [1.0, "flirtwithplayer"]
+          ],
+          "neutral" : [
+            [1.0, "annoyed"],
+            [1.0, "quit"]
+          ],
+          "bored" : [
+            [1.0, "annoyed"],
+            [1.0, "quit"]
+          ],
+          "vomit" : [
+            [1.0, "annoyed"],
+            [1.0, "quit"]
+          ],
+          "wink" : [
+            [1.0, "wink"],
+            [1.0, "love"],
+            [0.3, "follow"]
+          ],
+          "nosebleed" : [
+            [1.0, "wink"],
+            [1.0, "love"],
+            [0.3, "follow"]
+          ],
+          "love" : [
+            [1.0, "love"],
+            [0.3, "follow"]
+          ],
+          "comfort" : [
+            [1.0, "love"],
+            [0.3, "follow"]
+          ],
+          "follow" : [
+            [1.0, "wink"]
+          ],
+          "gohome" : [
+            [1.0, "follow"]
+          ],
+          "chase" : [ 
+            [1.0, "wink"]
+          ],
+          "default" : [
+            [5.0, "wink"]
+          ]
+        }
+      }]
+	],
+
+    "dialog" : {
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : {
+            "default" : {
+              "default" : [
+                "Hey! What's up with the furniture?",
+                "Some of my furniture is missing. What's the deal?",
+                "Someone broke my stuff. That's not cool."
+              ]
+            }
+          },
+          "enclosedArea" : {
+            "default" : {
+              "default" : [
+                "There's a hole in the walls.",
+                "Could you fix the wall please?",
+                "It's breezy in here. Did someone leave a window open?"
+              ]
+            }
+          },
+          "otherDeed" : {
+            "default" : {
+              "default" : [
+                "Oi! This is MY home.",
+                "Get that nonsense outta here!",
+				"Bugger off with your extra deeds mate."
+              ]
+            }
+          },
+          "severe" : {
+            "default" : {
+              "default" : [
+                "This is unacceptable!",
+                "How dare you treat your tenants like this!"
+              ]
+            }
+          },
+          "final" : {
+            "default" : {
+              "default" : [
+                "I'm done with this time waste. Peace out."
+              ]
+            }
+          }
+        },
+        "arrivedHome" : {
+          "beacon" : {
+			"default" : {
+				"default" : [
+					"Boo!",
+					"Surprise!"
+					]
+				}
+			},
+			"rent" : {
+				"default" : {
+					"default" : [
+						"Have some money for your troubles.",
+						"Keep up the good work!"
+					]
+				}
+			}
+        }
+      },
+      "converse" : {"human" : 
+					{
+					"default" : [
+						"Hi there! I'm a world class philanthropist!",
+						"I explored deep underground and collected a lot of fossils!",
+						"I own a big collection of armour. Bet you're jealous.",
+						"How many fossils have you found? I made a T. Rex!",
+						"Dapper? Why yes, I am!",
+						"The merchants sure do like to show off their individuality!",
+						"I taught some unique merchants to share their decorations! Take a look!",
+						"To the Bacon Cave!",
+						"Capes aren't just for vampyres you know!",
+						"Reading about the universe is super cool!",
+						"I'm not really a lord, you know; It just sounds fancy."
+					]
+					}},
+      "flee" : {
+        "helpme" : "/dialog/gatherer.config:helpme",
+        "helpthem" : "/dialog/gatherer.config:helpthem",
+        "encourage" : "/dialog/gatherer.config:encourage",
+        "safe" : "/dialog/gatherer.config:safe"
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "clocktophathead", "parameters" : { "colorIndex" : 2} } 
+            ],
+            "chest" : [
+              { "name" : "bettychest", "parameters" : { "colorIndex" : 2} }
+            ],
+            "back" : [
+              { "name" : "simplecapeback", "parameters" : { "colorIndex" : 2 } }
+            ],
+            "legs" : [
+              { "name" : "steamgreylegs", "parameters" : { "colorIndex" : 2 } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}

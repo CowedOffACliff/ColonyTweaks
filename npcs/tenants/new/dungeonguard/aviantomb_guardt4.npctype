@@ -1,0 +1,67 @@
+{
+  "type" : "aviantomb_guardt4",
+  "baseType" : "friendlyguardtenant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["common", "tenant"],
+      "graduation" : {
+        "nextNpcType" : []
+      }
+      },
+	  "reactions" : {
+      "spontaneous" : [
+        [1.0, "sit", { "timeRange" : [0.6,0.2]}],
+        [1.0, "patrol", { "timeRange" : [0.2, 0.6] }]
+      ]
+    },
+
+    "dialog" : {
+      "converse" : {
+        "avian" : {
+          "default" : [
+            "I have come to spread the good word of Kluex! Heed my teachings and earn your wings!",
+            "Every time something good happens to you, that's because of Kluex. Everything bad is your fault.",
+            "Did you know that every sun is an eye of Kluex? He sees all!",
+            "If we wish for flight, we must live in the light of Kluex!",
+            "Us Avians used to exist in the Heavens beyond the mortal realm. May we one day return!"
+          ],
+          "avian" : [
+            "You look like a fine follower of Kluex! May you one day earn your wings.",
+            "Do you also dream of one day regaining your wings? May absolution return us to what we once were.",
+            "Every time something good happens to you, that's because of Kluex. Everything bad is your fault.",
+            "Did you know that every sun is an eye of Kluex? He sees all!",
+            "If we wish for flight, we must live in the light of Kluex!"
+          ]
+        }
+      }
+    }
+	},
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "phoenixhat", "parameters" : { "colorIndex" : 6 } }
+            ],
+            "back" : [
+              { "name" : "tribalwingsback", "parameters" : { "colorIndex" : 6 } }
+            ],
+            "chest" : [
+              { "name" : "aviantier2chest", "parameters" : { "colorIndex" : 6 } }
+            ],
+            "legs" : [
+              { "name" : "aviantier2pants", "parameters" : { "colorIndex" : 6 } }
+            ],
+			"primary" : [
+              "npcassaultrifle"
+            ],
+            "sheathedprimary" : [
+              "npcbroadsword"
+            ]
+          }
+        ] ]
+    ]
+  }
+}

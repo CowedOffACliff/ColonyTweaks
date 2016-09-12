@@ -1,0 +1,91 @@
+{
+  "type" : "alpinemerchant",
+  "baseType" : "merchanttenant",
+  
+  "damageTeam" : 1,
+  
+  "disableWornArmor" : true,
+
+  "statusControllerSettings" : {
+    "statusProperties" : {
+      "effectDirectives" : ""
+    }
+  },
+
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+  "merchant" : {
+      "waitTime" : 40,
+      "storeRadius" : -1,
+      "categories" : {
+        "human" : ["alpinemerchant"]
+      },
+      "buyFactorRange" : [ 1.0, 1.0 ],
+      "sellFactorRange" : [ 0.2, 0.2 ],
+      "numItems" : 10,
+      "paneLayoutOverride" : {
+        "windowtitle" : {
+          "title" : "  Alpine Merchant",
+          "subtitle" : "  Sells alpine furniture."
+        }
+      }
+    },
+  
+    "questGenerator" : {
+      "pools" : ["common", "tenant", "merchant"]
+    },
+
+    "behaviorConfig" : {
+      "greetingChance" : 0
+    },
+
+    "dialog" : {
+	"merchant" : {
+        "start" : "/dialog/merchant.config:merchantStart",
+        "end" : "/dialog/merchant.config:merchantEnd",
+        "follow" : "/dialog/merchant.config:follow",
+        "welcome" : "/dialog/merchant.config:welcome",
+        "tout" : "/dialog/merchant.config:tout"
+      },
+      "flee" : {
+        "helpme" : "/dialog/flee.config:helpme",
+        "safe" : "/dialog/flee.config:safe"
+      },
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/alpaca.config:tagCriteria",
+          "enclosedArea" : "/dialog/alpaca.config:enclosedArea",
+          "otherDeed" : "/dialog/alpaca.config:otherDeed",
+          "severe" : "/dialog/alpaca.config:severe",
+          "final" : "/dialog/alpaca.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/alpaca.config:beacon",
+          "rent" : "/dialog/alpaca.config:rent"
+        }
+      },
+
+      "converse" : "/dialog/alpaca.config:converse"
+    }
+  },
+
+  "matchColorIndices" : true,
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "alpacavillagerhead", "parameters" : { "colorIndex" : [0, 1, 2, 3] } }
+            ],
+            "chest" : [
+              { "name" : "alpacavillagerchest", "parameters" : { "colorIndex" : [0, 1, 2, 3] } }
+            ],
+            "legs" : [
+              { "name" : "alpacavillagerlegs", "parameters" : { "colorIndex" : [0, 1, 2, 3] } }
+            ]
+          }
+        ] ]
+    ]
+  }
+}
+

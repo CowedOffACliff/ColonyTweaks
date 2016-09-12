@@ -1,0 +1,27 @@
+{
+  "name": "guardT6_opulent_random",
+  "priority": 20,
+
+  "colonyTagCriteria": {
+    "light": 1,
+    "door": 1,
+    "combat": 8,
+    "opulent": 30
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": ["human", "apex", "avian", "floran", "glitch", "hylotl"],
+      "level": 6,
+      "type": "guardt6_opulent",
+      "overrides": {
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [1200.0, 1800.0],
+    "pool": "customRent"
+  }
+}

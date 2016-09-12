@@ -1,0 +1,4 @@
+[
+{	"op": "replace", "path": "/scriptConfig/merchant/numItems", "value": 10},
+{	"op": "replace", "path": "/scriptConfig/merchant/storeRadius", "value": -1}
+]
