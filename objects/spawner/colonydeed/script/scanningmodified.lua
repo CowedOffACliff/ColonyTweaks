@@ -19,6 +19,8 @@ function setRoTBonus(value)
 end
 
 function setRepBonus(value)
+  if value == nil then value = 0 end
+
   local clamped = clamp(-100, value, 100)
   tenantHappiness = tenantHappiness + clamped
   tenantHappiness = clamp(-100, tenantHappiness, 100)

@@ -1,6 +1,6 @@
 {
   "name": "huntermerchant",
-  "priority": 11,
+  "priority": 9,
 
   "colonyTagCriteria": {
     "light": 1,

@@ -18,7 +18,8 @@ function init()
   if storage.tenantRep == nil then
     storage.tenantRep = clampRep(0)
   end
-  self.repTickdown = 120
+  self.repTickdown = 12000
+  self.repTick = 0
   
   self.shouldDie = true
   self.forceDie = false
@@ -92,7 +93,9 @@ end
 
 function setRepBonus(n)
   
-
+  if self.behavior.name == "merchanttenant" then
+    n = n * 0.75
+  end
   if self.behavior.name == "guard" then
     n = n * 0.75
   end
@@ -204,18 +207,25 @@ function update(dt)
     self.interacted = false
     self.damaged = false
     self.stunned = false
+    if self.notifications[1]  then
+      sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. "Type: " .. sb.print(npc.npcType()) .. " Notifications: " .. sb.print(self.notifications.type))
+    end
     self.notifications = {}
   end
   self.behaviorTick = self.behaviorTick + 1
 
-  if math.floor(dt) / self.repTickdown == 0 and not storage.tenantRep == 0 then
-    sb.logInfo("DT: " .. sb.print(dt))
+  if self.repTick > self.repTickdown and storage.tenantRep == 0 then
+    sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. "Type: " .. sb.print(npc.npcType()) .. " Rep 1: " .. sb.print(storage.tenantRep))
     if storage.tenantRep < 0 then 
       storage.tenantRep = storage.tenantRep + 1
-    else 
-      storage.tenantRep = storage.tenantRep - 1
+      else if storage.tenantRep > 0 then
+        storage.tenantRep = storage.tenantRep - 1
+      end
     end
+    sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. "Type: " .. sb.print(npc.npcType()) .. " Rep 2: " .. sb.print(storage.tenantRep))
+    self.repTick = 0
   end
+  self.repTick = self.repTick + 1
 
   runWorkers()
 
@@ -256,6 +266,7 @@ end
 function damage(args)
   self.damaged = true
   BData:setEntity("damageSource", args.sourceId)
+  sb.logInfo("Entity Damaged")
   setRepBonus(-5)
 end
 

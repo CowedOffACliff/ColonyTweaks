@@ -1,6 +1,6 @@
 {
   "name": "wealthymerchant",
-  "priority": 20,
+  "priority": 9,
 
   "colonyTagCriteria": {
     "light": 1,

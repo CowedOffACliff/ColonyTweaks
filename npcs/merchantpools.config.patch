@@ -775,7 +775,7 @@
     { "item" : { "name" : "jukebox" }, 				"rarity" : 0.9},
     { "item" : { "name" : "plasmadisc" }, 			"rarity" : 0.9},
     { "item" : { "name" : "steampunkhead" }, 		"rarity" : 0.2},
-	{ "item" : { "name" : "copperceillinglight" }, 	"rarity" : 0.9},
+	{ "item" : { "name" : "copperceilinglight" }, 	"rarity" : 0.9},
 	{ "item" : { "name" : "copperfence" }, 			"rarity" : 0.9},
 	{ "item" : { "name" : "copperlantern" }, 		"rarity" : 0.9},
 	{ "item" : { "name" : "copperplatform" }, 		"rarity" : 0.9},

@@ -33,6 +33,70 @@
       "pools" : ["common", "tenant", "merchant"]
     },
 
+	"personalities" : [ 
+		[1.0, {
+        "personality" : "cheerful",
+        "additiveReactions" : [ "spontaneous" ],
+        "reactions" : {
+          "emo" : [
+            [1.0, "comfort"]
+          ],
+          "flee" : [
+            [1.0, "wave"]
+          ],
+          "gohome" : [
+            [1.0, "wave"]
+          ],
+          "chase" : [
+            [1.0, "smile"]
+          ],
+          "cry" : [
+            [1.0, "comfort"],
+            [1.0, "oh"],
+            [0.3, "follow"]
+          ],
+          "panic" : [
+            [1.0, "comfort"],
+            [1.0, "oh"],
+            [0.3, "follow"]
+          ],
+          "wink" : [
+            [1.0, "love"],
+            [1.0, "wink"],
+            [1.0, "follow"]
+          ],
+          "nosebleed" : [
+            [1.0, "comfort"],
+            [0.3, "follow"]
+          ],
+          "vomit" : [
+            [1.0, "comfort"],
+            [0.3, "follow"]
+          ],
+          "bored" : [
+            [1.0, "laugh"],
+            [1.0, "smile"]
+          ],
+          "spontaneous" : [
+            [1.0, "smile"]
+          ],
+          "hasquest" : [
+            [1.0, "smile"]
+          ],
+          "default" : [
+            [1.0, "smile"],
+            [1.0, "jumpforjoy"],
+            [1.0, "laugh"],
+            [1.0, "oh"],
+            [1.0, "wink"],
+            [1.0, "love"],
+            [1.0, "quit"],
+            [1.0, "follow"]
+          ]
+        }
+      }]
+	],
+
     "dialog" : {
 	"merchant" : {
         "start" : "/dialog/merchant.config:merchantStart",

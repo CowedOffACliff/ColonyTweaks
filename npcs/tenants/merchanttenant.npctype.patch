@@ -2,5 +2,8 @@
 	{"op" : "add", "path" : "/scripts", "value" : 
 	[
 		"/npcs/tenantbase.lua"
-	]}
+	]},
+	{"op" : "add", "path" : "/scriptConfig/behavior", "value" : 
+		"merchanttenant"
+	}
 ]
