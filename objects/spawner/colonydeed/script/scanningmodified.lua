@@ -60,8 +60,13 @@ function setRentLevel(tagCount)
   -- changed to base 11 to represent new base of 11 for custom rent pools, levels 1-10 are now for vanilla compat coverage
   rentLevelFromTags = 11 + level
   rentMemory = rentLevelFromTags
-  
-  --sb.logInfo("ObjPos: " .. sb.print(self.position) .. " RLevel: " .. rentLevelFromTags .. " ObjCount: " .. sb.print(houseObjectCount) .. " TBonus: " .. sb.print(rentOverTimeBonus) .. " RBonus: " .. sb.print(tenantHappiness))
+--  if storage.occupier then
+--    sb.logInfo("Type: " .. sb.print(storage.occupier.name) .. 
+--              " RLevel: " .. rentLevelFromTags .. 
+--              " ObjCount: " .. sb.print(houseObjectCount) .. 
+--              " TBonus: " .. sb.print(rentOverTimeBonus) .. 
+--              " RBonus: " .. sb.print(tenantHappiness))
+--  end
 end
 
 function getLevelFromTags()

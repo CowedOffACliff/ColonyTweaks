@@ -18,7 +18,7 @@ function init()
   if storage.tenantRep == nil then
     storage.tenantRep = clampRep(0)
   end
-  self.repTickdown = 12000
+  self.repTickdown = 5400 -- 1:30 seconds @ 60 updates per second
   self.repTick = 0
   
   self.shouldDie = true
@@ -207,22 +207,26 @@ function update(dt)
     self.interacted = false
     self.damaged = false
     self.stunned = false
-    if self.notifications[1]  then
-      sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. "Type: " .. sb.print(npc.npcType()) .. " Notifications: " .. sb.print(self.notifications.type))
+    if self.notifications[1] and self.notifications[1].type ~= "chatrequest" then
+      sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. " Type: " .. sb.print(npc.npcType()) .. " Notifications: " .. sb.print(self.notifications[1].type) .. " " .. sb.print(self.notifications[1].sourceId))
     end
+    
+    if self.notifications[1] and self.notifications[1].type == "monsterdeath" then
+      setRepBonus(2)
+    end
+    
     self.notifications = {}
   end
   self.behaviorTick = self.behaviorTick + 1
 
-  if self.repTick > self.repTickdown and storage.tenantRep == 0 then
-    sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. "Type: " .. sb.print(npc.npcType()) .. " Rep 1: " .. sb.print(storage.tenantRep))
-    if storage.tenantRep < 0 then 
+  if self.repTick >= self.repTickdown then
+    if storage.tenantRep <= 0 then 
       storage.tenantRep = storage.tenantRep + 1
-      else if storage.tenantRep > 0 then
+    else
         storage.tenantRep = storage.tenantRep - 1
-      end
     end
-    sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. "Type: " .. sb.print(npc.npcType()) .. " Rep 2: " .. sb.print(storage.tenantRep))
+    
+    --sb.logInfo("Rep Changed :" .. "( ID: " .. sb.print(entity.uniqueId) .. " Type: " .. sb.print(npc.npcType()) .. ")")
     self.repTick = 0
   end
   self.repTick = self.repTick + 1
@@ -266,8 +270,8 @@ end
 function damage(args)
   self.damaged = true
   BData:setEntity("damageSource", args.sourceId)
-  sb.logInfo("Entity Damaged")
-  setRepBonus(-5)
+  sb.logInfo("Entity Damaged: " .. sb.print(npc.npcType()) .. " : " .. sb.print(args))
+  setRepBonus(-2)
 end
 
 function shouldDie()

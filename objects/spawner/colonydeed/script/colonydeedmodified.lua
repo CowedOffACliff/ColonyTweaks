@@ -183,7 +183,9 @@ end
 
 function getPredominantTags(n)
   if not storage.occupier then return {} end
+  --sb.logInfo("House: " .. sb.print(storage.house))
   local house = findHouseBoundary(self.position, self.maxPerimeter)
+  --sb.logInfo("House: " .. sb.print(storage.house))
   local scanResults = scanHouseContents(storage.house.boundary)
 
   local tagMultiset = countTags(scanResults.objects, house.doors or {})
