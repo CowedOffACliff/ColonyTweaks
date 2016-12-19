@@ -59,6 +59,14 @@ function init()
   self.timers:runWhile(self.healthCheckTimer, function ()
       return isOccupied() and not isVacated() and not isHealing()
     end)
+  
+  message.setHandler("getRent", function()
+      self.rentTimer:reset()
+      return {
+        pool = getRent().pool,
+        level = getRentLevel()
+      }
+    end)
 	
   self.interactionDebouncer = 0.0
   

@@ -5,11 +5,11 @@ require "/scripts/vec2.lua"
 require "/scripts/quest/participant.lua"
 require "/scripts/relationships.lua"
 require "/scripts/actions/dialog.lua"
+require "/scripts/actions/movement.lua"
 require "/scripts/drops.lua"
 require "/scripts/statusText.lua"
 require "/scripts/tenant.lua"
 require "/scripts/companions/recruitable.lua"
-
 
 -- Engine callback - called on initialization of entity
 function init()
@@ -39,8 +39,8 @@ function init()
   self.quest.onOfferedQuestFinished = offeredQuestFinished
 
   if config.getParameter("behavior") then
-    self.behavior = BTree:new(config.getParameter("behavior"), config.getParameter("behaviorConfig", {}))
-    self.behavior.topLevel = true
+    self.behavior = root.behavior(config.getParameter("behavior"), config.getParameter("behaviorConfig", {}))
+    self.behaviorState = self.behavior:init(_ENV)
   end
 
   npc.setInteractive(true)
@@ -85,6 +85,10 @@ function init()
   end
 
   recruitable.init()
+
+  if type(extraInit) == "function" then
+    extraInit()
+  end
 end
 
 function clampRep(n) 
@@ -183,13 +187,18 @@ function update(dt)
     self.setFacingDirection = false
     self.primaryFire = false
     self.altFire = false
+    self.controlAggressive = false
+    self.lounge = false
+    self.playing = false
+    self.moving = false
 
+    BData:clearControls()
     BData:setEntity("self", entity.id())
     BData:setPosition("self", mcontroller.position())
     BData:setNumber("facingDirection", mcontroller.facingDirection())
 
     if self.behavior then
-      self.behavior:run(dt * self.behaviorTickRate)
+      self.behavior:run(self.behaviorState, dt * self.behaviorTickRate)
     end
     BGroup:updateGroups()
 
@@ -203,12 +212,29 @@ function update(dt)
     else
       npc.endAltFire()
     end
+    if self.controlAggressive then
+      npc.setAggressive(true)
+    else
+      npc.setAggressive(config.getParameter("aggressive", false))
+    end
+    if not self.lounge and npc.isLounging() then
+      npc.resetLounging()
+    end
+    if not self.playing and self.playTarget then
+      if world.entityExists(self.playTarget) then
+        world.callScriptedEntity(self.playTarget, "npcToy.notifyNpcPlayEnd", entity.id())
+      end
+      self.playTarget = nil
+    end
+
+    BData:update()
 
     self.interacted = false
     self.damaged = false
     self.stunned = false
+    
     if self.notifications[1] and self.notifications[1].type ~= "chatrequest" then
-      sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. " Type: " .. sb.print(npc.npcType()) .. " Notifications: " .. sb.print(self.notifications[1].type) .. " " .. sb.print(self.notifications[1].sourceId))
+      --sb.logInfo("ID: " .. sb.print(entity.uniqueId) .. " Type: " .. sb.print(npc.npcType()) .. " Notifications: " .. sb.print(self.notifications[1].type) .. " " .. sb.print(self.notifications[1].sourceId))
     end
     
     if self.notifications[1] and self.notifications[1].type == "monsterdeath" then
@@ -218,7 +244,7 @@ function update(dt)
     self.notifications = {}
   end
   self.behaviorTick = self.behaviorTick + 1
-
+  
   if self.repTick >= self.repTickdown then
     if storage.tenantRep <= 0 then 
       storage.tenantRep = storage.tenantRep + 1
@@ -231,7 +257,7 @@ function update(dt)
   end
   self.repTick = self.repTick + 1
 
-  runWorkers()
+  movement()
 
   self.die = (self.shouldDie and not status.resourcePositive("health")) or self.forceDie
 end
@@ -249,14 +275,18 @@ function interact(args)
     return { "OpenMerchantInterface", self.tradingConfig }
   end
 
-  local interactAction = config.getParameter("interactAction")
-  if interactAction then
-    local data = config.getParameter("interactData", {})
-    if type(data) == "string" then
-      data = root.assetJson(data)
+  if type(handleInteract) == "function" then
+    return handleInteract(args)
+  else
+    local interactAction = config.getParameter("interactAction")
+    if interactAction then
+      local data = config.getParameter("interactData", {})
+      if type(data) == "string" then
+        data = root.assetJson(data)
+      end
+      setRepBonus(1)
+      return { interactAction, data }
     end
-    setRepBonus(1)
-    return { interactAction, data }
   end
 end
 
@@ -270,7 +300,7 @@ end
 function damage(args)
   self.damaged = true
   BData:setEntity("damageSource", args.sourceId)
-  sb.logInfo("Entity Damaged: " .. sb.print(npc.npcType()) .. " : " .. sb.print(args))
+  --sb.logInfo("Entity Damaged: " .. sb.print(npc.npcType()) .. " : " .. sb.print(args))
   setRepBonus(-2)
 end
 
